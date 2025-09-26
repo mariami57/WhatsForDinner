@@ -33,13 +33,15 @@ else:
     DEBUG = False
 
 
-
 ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
 
 CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS').split(',')
 
 
 # Application definition
+PROJECT_APPS = [
+    'recipes',
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -48,7 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-]
+] + PROJECT_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
