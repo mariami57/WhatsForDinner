@@ -3,7 +3,7 @@ from django import forms
 
 class RecipeBaseForm(forms.ModelForm):
     class Meta:
-        exclude = 'ingredients'
+        exclude = ('ingredients',)
 
         labels = {
             'title': 'Recipe title:',
