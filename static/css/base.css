@@ -5,8 +5,6 @@ body {
 
 }
 
-
-
 .newsletter-prompt {
     background-color: rgb(231, 81, 81);
     color: white;
@@ -28,4 +26,24 @@ body {
 
 .letter-emoji {
     font-size: 1.2em;
+}
+
+.nav-block {
+    background-color: #fefae9;
+    display: flex;
+    justify-content: center;
+    gap:450px;
+    align-items: center;
+    padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+}
+
+.logo-img img {
+    width: 300px;
+}
+
+nav ul{
+    list-style-type: none;
+    display:flex;
+    justify-content: space-between;
+    gap:20px;
 }
