@@ -1,5 +1,16 @@
 {%  extends 'common/base.html' %}
+{% load static %}
 
 {% block content %}
+    <div class="intro-section">
+        <div class="homedish-img">
+            <img src="{% static 'images/homepage-dish.png' %}" alt="">
+        </div>
+        <p>Dinner dilemmas? Solved. At What’s for Dinner?, we turn the daily “uhhh… what should we eat?”
+            into a menu of tasty options. From quick fixes to cozy comfort food, you’ll find recipes that fit your vibe,
+            your pantry, and your mood — no overthinking required.
+        </p>
+    </div>
+
 
 {% endblock %}
