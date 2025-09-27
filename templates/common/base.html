@@ -5,16 +5,38 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="{% static 'css/styles.css'%}">
     <title>What`s for Dinner</title>
 </head>
 <body>
-    <div class="newsletter-prompt">
-        <a href="#">Sign up for our newsletter by clicking here<span class="letter-emoji">💌</span></a>
-    </div>
+    <main>
+        <div class="newsletter-prompt">
+            <a href="#">Sign up for our newsletter by clicking here<span class="letter-emoji">💌</span></a>
+        </div>
 
-    {% include "common/nav.html" %}
-    {% block content %}
-    {% endblock %}
+        {% include "common/nav.html" %}
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <div class="social-media">
+             <p>Follow us</p>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+
+        <div class="additional-info">
+            <a href="#">Recipe Index</a>
+            <a href="#">About</a>
+            <a href="#">Contacts</a>
+        </div>
+
+
+    </footer>
+
 </body>
 </html>
