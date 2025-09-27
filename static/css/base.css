@@ -1,0 +1,31 @@
+body {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+.newsletter-prompt {
+    background-color: rgb(231, 81, 81);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+.newsletter-prompt a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.newsletter-prompt a:hover{
+    color: rgb(194, 197, 127);
+}
+
+.letter-emoji {
+    font-size: 1.2em;
+}
