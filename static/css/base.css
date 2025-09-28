@@ -19,7 +19,7 @@ a {
     text-decoration: none;
 }
 
-.newsletter-prompt a:hover, nav ul li:hover{
+.newsletter-prompt a:hover, nav ul li:hover, .links a:hover{
     color: rgb(194, 197, 127);
 }
 
@@ -66,6 +66,7 @@ nav ul{
     max-width: 1000px;
     padding: 30px;
     margin: 0 auto;
+
 }
 
 .intro-section p {
@@ -73,11 +74,17 @@ nav ul{
     font-size:1.5rem;
 }
 
+footer{
+    margin-bottom: 0;
+}
 .social-media {
     display:flex;
     gap: 20px;
     justify-content: center;
     align-items: center;
+    background-color: rgba(246, 246, 246, 0.8);
+    padding-top:50px;
+    padding-bottom:50px;
 
 }
 
@@ -101,4 +108,28 @@ nav ul{
 .icons i:hover {
     background-color: rgb(194, 197, 127);
     cursor: pointer;
+}
+
+.additional-info, .credentials {
+    background-color: #fefae9;
+    color: rgb(231, 81, 81);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding: 30px;
+    gap:100px;
+}
+
+.links {
+    display:flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    font-weight:800;
+    gap:30px;
+}
+
+.credentials {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight:800;
 }
