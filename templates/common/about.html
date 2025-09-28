@@ -3,6 +3,29 @@
 
 {% block content %}
 
+    <div class="carousel">
+        <div class="carousel-track">
+            <div class="carousel-slide">
+                <img src="{% static 'images/photo-1.jpg'%}" alt="Delicious dish 1">
+            </div>
+
+            <div class="carousel-slide">
+                <img src="{% static 'images/photo-2.jpg'%}" alt="Delicious dish 2">
+            </div>
+
+            <div class="carousel-slide">
+                <img src="{% static 'images/photo-3.jpg'%}" alt="Delicious dish 3">
+            </div>
+        </div>
+
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+    </div>
+
+
+
+
+
     <p>
         At <b>What’s for Dinner?</b>, we get it — choosing what to eat can feel harder than cooking itself.
         That’s why we built a space where inspiration comes easy and dinner feels exciting again.
@@ -15,4 +38,27 @@
         and help turn this space into a cookbook that’s written <i>by all of us, for all of us</i>.
 
     </p>
+
+
+<script>
+const track = document.querySelector('.carousel-track');
+const slides = Array.from(track.children);
+const nextBtn = document.querySelector('.carousel-btn.next');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+let currentIndex = 0;
+
+function updateCarousel(){
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+});
+
+prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel();
+});
+</script>
 {% endblock %}
