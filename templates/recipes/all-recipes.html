@@ -14,9 +14,7 @@
 
         <p>{{ recipe.instructions }}</p>
         <ul>
-            {%  for ingredient in recipe.ingredients.all %}
-                <li>{{  ingredient }}</li>
-            {% endfor %}
+            {{ recipe.ingredients }}
         </ul>
 
 

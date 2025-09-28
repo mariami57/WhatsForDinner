@@ -41,7 +41,6 @@ CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS').split(',')
 # Application definition
 PROJECT_APPS = [
     'recipes',
-    'ingredients',
     'common',
 ]
 

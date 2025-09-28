@@ -15,10 +15,6 @@ class RecipeBaseForm(forms.ModelForm):
             'ingredients': 'Ingredients:',
         }
 
-        widgets = {
-            'ingredients': forms.SelectMultiple(attrs={'class': 'select2'}),
-        }
-
 class RecipeCreateForm(RecipeBaseForm):
     pass
 
