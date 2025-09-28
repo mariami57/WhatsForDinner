@@ -11,9 +11,8 @@
                 <a href="{%  url 'home' %}">Home</a>
             </li>
 
-            <li class="dropdown">
-                <a href="{%  url 'all-recipes' %}">Recipes</a> <button class="dropdown-toggle" aria-expanded="false">▾</button>
-
+            <li class="dropdown {% if request.resolver_match.url_name == 'all-recipes' %}open{% endif %}">
+                <a href="{%  url 'all-recipes' %}">Recipes</a>
                 <ul class="dropdown-menu">
                     <li><a href="#"><i class="fa-solid fa-circle-plus"></i></a></li>
                     <li><a href="#"><i class="fa-solid fa-book"></i></a></li>
@@ -28,20 +27,3 @@
     </nav>
 </div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const toggles = document.querySelectorAll(".dropdown-toggle");
-
-        toggles.forEach(toggle => {
-            toggle.addEventListener("click", function(e) {
-                e.stopPropagation();
-                const dropdown = toggle.closest(".dropdown");
-                dropdown.classList.toggle("open");
-            });
-        });
-
-        document.addEventListener("click", function() {
-            document.querySelectorAll(".dropdown").forEach( d => d.classList.remove("open"));
-        });
-    });
-</script>

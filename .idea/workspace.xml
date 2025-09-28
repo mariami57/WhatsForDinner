@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a8b7d703-4829-4b30-a099-4fb827c3ed1c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/recipes/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/nav.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/common/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/nav.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/recipes/all-recipes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recipes/all-recipes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/recipes/create-recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recipes/create-recipe.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +101,7 @@
       <updated>1758897049547</updated>
       <workItem from="1758897050651" duration="5757000" />
       <workItem from="1758993366562" duration="5979000" />
-      <workItem from="1759049964122" duration="11943000" />
+      <workItem from="1759049964122" duration="13264000" />
     </task>
     <servers />
   </component>
