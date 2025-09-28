@@ -9,12 +9,13 @@ from recipes.models import Recipe
 class RecipeCreateView(CreateView):
     model = Recipe
     form_class = RecipeCreateForm
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('all-recipes')
     template_name = 'recipes/create-recipe.html'
 
 
 class RecipesListView(ListView):
     model = Recipe
     template_name = 'recipes/all-recipes.html'
+
 
 

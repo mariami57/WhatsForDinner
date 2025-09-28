@@ -14,9 +14,18 @@
             <li class="dropdown {% if request.resolver_match.url_name == 'all-recipes' %}open{% endif %}">
                 <a href="{%  url 'all-recipes' %}">Recipes</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#"><i class="fa-solid fa-circle-plus"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-book"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-heart"></i></a></li>
+                    <li class="tooltip-container"><a href="{% url 'create-recipe' %}">
+                        <i class="fa-solid fa-circle-plus"></i>
+                        <span class="tooltip-text">Add Recipe</span>
+                    </a></li>
+                    <li class="tooltip-container"><a href="#">
+                        <i class="fa-solid fa-book"></i>
+                        <span class="tooltip-text">My Recipes</span>
+                    </a></li>
+                    <li class="tooltip-container"><a href="#">
+                        <i class="fa-solid fa-heart"></i>
+                        <span class="tooltip-text">Favourite Recipies</span>
+                    </a></li>
                 </ul>
             </li>
 

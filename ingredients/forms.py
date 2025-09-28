@@ -1,8 +1,11 @@
 from django import forms
 
+from ingredients.models import Ingredient
+
 
 class IngredientBaseForm(forms.ModelForm):
     class Meta:
+        model = Ingredient
         fields= '__all__'
 
         labels = {
