@@ -2,42 +2,40 @@
 {% load static %}
 
 {% block content %}
+    <div class="about-us">
+        <div class="carousel infinite">
+            <div class="carousel-track">
+                <div class="carousel-slide"><img src="{% static 'images/photo-1.jpg'%}" alt="Delicious dish 1"></div>
+                <div class="carousel-slide"><img src="{% static 'images/photo-2.jpg'%}" alt="Delicious dish 2"></div>
+                <div class="carousel-slide"><img src="{% static 'images/photo-3.jpg'%}" alt="Delicious dish 3"></div>
+                <div class="carousel-slide"><img src="{% static 'images/photo-4.jpg'%}" alt="Delicious dish 4"></div>
+                <div class="carousel-slide"><img src="{% static 'images/photo-5.jpg'%}" alt="Delicious dish 5"></div>
+                <div class="carousel-slide"><img src="{% static 'images/photo-6.jpg'%}" alt="Delicious dish 6"></div>
 
-    <div class="carousel">
-        <div class="carousel-track">
-            <div class="carousel-slide">
-                <img src="{% static 'images/photo-1.jpg'%}" alt="Delicious dish 1">
+                <div class="carousel-slide"><img src="{% static 'images/photo-1.jpg'%}" alt="Delicious dish 1"></div>
+                <div class="carousel-slide"><img src="{% static 'images/photo-2.jpg'%}" alt="Delicious dish 2"></div>
+                <div class="carousel-slide"><img src="{% static 'images/photo-3.jpg'%}" alt="Delicious dish 3"></div>
+                <div class="carousel-slide"><img src="{% static 'images/photo-4.jpg'%}" alt="Delicious dish 4"></div>
+                <div class="carousel-slide"><img src="{% static 'images/photo-5.jpg'%}" alt="Delicious dish 5"></div>
+                <div class="carousel-slide"><img src="{% static 'images/photo-6.jpg'%}" alt="Delicious dish 6"></div>
             </div>
 
-            <div class="carousel-slide">
-                <img src="{% static 'images/photo-2.jpg'%}" alt="Delicious dish 2">
-            </div>
-
-            <div class="carousel-slide">
-                <img src="{% static 'images/photo-3.jpg'%}" alt="Delicious dish 3">
-            </div>
         </div>
 
-        <button class="carousel-btn prev">&#10094;</button>
-        <button class="carousel-btn next">&#10095;</button>
+        <p>
+            At <b>What’s for Dinner?</b>, we get it — choosing what to eat can feel harder than cooking itself.
+            That’s why we built a space where inspiration comes easy and dinner feels exciting again.
+            We’re all about simple recipes, fresh ideas, and helping you turn “just ingredients”
+            into meals you actually want to eat.
+
+            Got a dish that always gets rave reviews at family dinners or a quirky kitchen hack that deserves the
+            spotlight? Don’t keep it to yourself — share it with the <b>What’s for Dinner?</b> community! Upload your recipes,
+            swap ideas with other food lovers,
+            and help turn this space into a cookbook that’s written <i>by all of us, for all of us</i>.
+
+        </p>
     </div>
 
-
-
-
-
-    <p>
-        At <b>What’s for Dinner?</b>, we get it — choosing what to eat can feel harder than cooking itself.
-        That’s why we built a space where inspiration comes easy and dinner feels exciting again.
-        We’re all about simple recipes, fresh ideas, and helping you turn “just ingredients”
-        into meals you actually want to eat.
-
-        Got a dish that always gets rave reviews at family dinners or a quirky kitchen hack that deserves the
-        spotlight? Don’t keep it to yourself — share it with the <b>What’s for Dinner?</b> community! Upload your recipes,
-        swap ideas with other food lovers,
-        and help turn this space into a cookbook that’s written <i>by all of us, for all of us</i>.
-
-    </p>
 
 
 <script>
@@ -51,14 +49,10 @@ function updateCarousel(){
     track.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
-nextBtn.addEventListener('click', () => {
+setInterval(() => {
     currentIndex = (currentIndex + 1) % slides.length;
     updateCarousel();
-});
 
-prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    updateCarousel();
-});
+}, 3000);
 </script>
 {% endblock %}

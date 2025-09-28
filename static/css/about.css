@@ -1,7 +1,6 @@
-.carousel {
+.carousel.infinite {
     position: relative;
-    width: 80%;
-    max-width: 700px;
+    width: 1000px;
     margin: 2rem auto;
     overflow: hidden;
     border-radius: 12px;
@@ -10,47 +9,32 @@
 
 .carousel-track {
     display:flex;
-    transition: transfor 0.5s ease-in-out;
+    width: max-content;
+    animation: scroll-left 20s linear infinite;
 }
 
 .carousel-slide {
-    min-width: 100%;
-    box-sizing: border-box;
+    flex: 0 0 auto;
+    margin-right: 20px;
 }
 
 .carousel-slide img {
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 500px;
     display:block;
     border-radius:12px;
+    flex-shrink: 0;
+}
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-
-.car-btns{
-    width:300px;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255,255,255,0.8);
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  border-radius: 50%;
-  transition: background 0.3s;
-}
-
-.carousel-btn:hover {
-  background: rgba(255,255,255,1);
-}
-
-.carousel-btn.prev {
-  left: 10px;
-}
-
-.carousel-btn.next {
-      left: 250px;
+.about-us p {
+    text-align: center;
+    padding: 30px;
+    max-width:1000px;
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+    font-weight:700;
 }
