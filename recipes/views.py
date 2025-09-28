@@ -16,3 +16,5 @@ class RecipeCreateView(CreateView):
 class RecipesListView(ListView):
     model = Recipe
     template_name = 'recipes/all-recipes.html'
+
+

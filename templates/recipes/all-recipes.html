@@ -2,9 +2,22 @@
 
 {% block content %}
     {% for recipe in recipe_list %}
-        {{ recipe.title }}
-        {{ recipe.image }}
-        {{ recipe.instructions }}
+        <div class="recipe-img">
+        {% if recipe.image %}
+            {{ recipe.image }}
+        {% endif %}
+        </div>
+
+        <h2>{{ recipe.title }}</h2>
+
+        <p>{{ recipe.instructions }}</p>
+        <ul>
+            {%  for ingredient in recipe.ingredients.all %}
+                <li>{{  ingredient }}</li>
+            {% endfor %}
+        </ul>
+
+
     {% empty %}
         <h1>No recipes to show</h1>
     {% endfor %}
