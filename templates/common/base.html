@@ -11,13 +11,15 @@
 </head>
 <body>
     <main>
-        <div class="newsletter-prompt">
-            <a href="#">Sign up for our newsletter by clicking here<span class="letter-emoji">💌</span></a>
-        </div>
+        <div class="content-wrap">
+            <div class="newsletter-prompt">
+                <a href="#">Sign up for our newsletter by clicking here<span class="letter-emoji">💌</span></a>
+            </div>
 
-        {% include "common/nav.html" %}
-        {% block content %}
-        {% endblock %}
+            {% include "common/nav.html" %}
+            {% block content %}
+            {% endblock %}
+        </div>
     </main>
 
     <footer>
@@ -35,7 +37,7 @@
         <div class="additional-info">
             <div class="links">
                 <a href="#">Recipe Index</a>
-                <a href="#">About</a>
+                <a href="{% url 'about' %}">About</a>
                 <a href="#">Contacts</a>
             </div>
 

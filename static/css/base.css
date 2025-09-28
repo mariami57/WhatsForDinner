@@ -1,7 +1,17 @@
-body {
-
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
+}
+
+main {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrap {
+    flex: 1;
 }
 
 .newsletter-prompt {
@@ -65,7 +75,7 @@ nav ul{
     align-items: center;
     max-width: 1000px;
     padding: 30px;
-    margin: 0 auto;
+   margin: 100px auto;
 
 }
 
