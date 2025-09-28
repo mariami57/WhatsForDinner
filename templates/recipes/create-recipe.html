@@ -3,7 +3,42 @@
 {% block content %}
     <form method="POST">
     {% csrf_token %}
-    {{ form }}
+    {{ form.non_field_errors }}
+
+    <div>
+        {{ form.title.label_tag }}<br>
+        {{ form.title }}
+        {{ form.title.errors }}
+    </div>
+
+    <div>
+        {{ form.image.label_tag }}<br>
+        {{ form.image }}
+        {{ form.image.errors }}
+    </div>
+
+    <div>
+        {{ form.instructions.label_tag }}<br>
+        {{ form.instructions }}
+        {{ form.instructions.errors }}
+    </div>
+
+    <div>
+        {{ form.ingredients.label_tag }}<br>
+        {{ form.ingredients }}
+        {{ form.ingredients.errors }}
+    </div>
+
     <button>Submit</button>
     </form>
+
+<script>
+    $(document).ready(function () {
+        $('.select2').select2({
+            tags: true,
+            tokenSeparators: [','],
+            placeholder: 'Select or type ingredients'
+        })
+    })
+</script>
 {% endblock %}

@@ -16,7 +16,7 @@ class RecipeBaseForm(forms.ModelForm):
         }
 
         widgets = {
-            'ingredients': forms.Select(),  # shows ingredients as checkboxes
+            'ingredients': forms.SelectMultiple(attrs={'class': 'select2'}),
         }
 
 class RecipeCreateForm(RecipeBaseForm):
