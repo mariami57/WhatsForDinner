@@ -72,3 +72,33 @@ nav ul{
     font-family: "Roboto", sans-serif;
     font-size:1.5rem;
 }
+
+.social-media {
+    display:flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.social-media p {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size:1.5rem;
+    color: rgb(231, 81, 81);
+    font-weight:800;
+}
+
+.icons i {
+    font-size:1.5rem;
+    background-color: rgb(231, 81, 81);
+    color: white;
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin-left: 10px;
+}
+
+.icons i:hover {
+    background-color: rgb(194, 197, 127);
+    cursor: pointer;
+}
