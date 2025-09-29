@@ -8,3 +8,6 @@ class HomeView(TemplateView):
 
 class AboutPageView(TemplateView):
     template_name = 'common/about.html'
+
+class ContactsPageView(TemplateView):
+    template_name = 'common/contacts.html'

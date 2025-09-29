@@ -22,6 +22,10 @@
 .contact-form .form-group {
     margin-bottom: 1.5rem;
     text-align: left;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
 }
 
 .contact-form label {
