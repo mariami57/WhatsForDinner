@@ -4,18 +4,27 @@
 {% block content %}
 
     {% for recipe in recipe_list %}
-        <div class="recipe-img">
-        {% if recipe.image %}
-            <img src="{{ recipe.image.url }}" alt="recipe-image">
-        {% endif %}
+        <div class="recipe-container">
+             <div class="recipe-img">
+                {% if recipe.image %}
+                    <img src="{{ recipe.image.url }}" alt="recipe-image">
+                {% endif %}
+            </div>
+            <div class="recipe-info">
+                 <h1>{{ recipe.title }}</h1>
+
+                <p>{{ recipe.instructions }}</p>
+                <ul>
+                  {% for ingredient in recipe.ingredients.splitlines %}
+                    {% if ingredient %}
+                      <li>{{ ingredient }}</li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+            </div>
+
         </div>
 
-        <h2>{{ recipe.title }}</h2>
-
-        <p>{{ recipe.instructions }}</p>
-        <ul>
-            {{ recipe.ingredients|linebreaks }}
-        </ul>
 
 
     {% empty %}

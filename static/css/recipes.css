@@ -84,3 +84,19 @@
     background-color: rgb(194, 197, 127);
     cursor:pointer;
 }
+
+
+.recipe-container {
+    width:80%;
+    display:flex;
+    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+
+}
+
+.recipe-img img {
+    width:300px;
+    height:auto;
+}
