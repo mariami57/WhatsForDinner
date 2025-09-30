@@ -1,0 +1,43 @@
+.recipe-form {
+    display:flex;
+    margin: 50px auto;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    border: 3px solid  #f77f00;
+    border-radius:15px;
+    width:30%;
+    padding:20px;
+
+}
+
+.recipe-form .generic-div{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+}
+
+.recipe-form .image-div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:3px;
+}
+
+.generic-div input, .generic-div textarea{
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.generic-div input:focus,
+.generic-div textarea:focus {
+    border-color: rgb(231, 81, 81);
+    outline: none;
+    box-shadow: 0 0 5px rgba(247,127,0,0.3);
+}

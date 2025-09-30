@@ -6,6 +6,7 @@
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     text-align: center;
+    font-family: "Roboto", sans-serif;
 }
 
 .contact-section h1 {
@@ -46,14 +47,14 @@
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #f77f00;
+    border-color: rgb(231, 81, 81);
     outline: none;
     box-shadow: 0 0 5px rgba(247,127,0,0.3);
 }
 
 .contact-form button {
     padding: 0.8rem 2rem;
-    background: #f77f00;
+    background: rgb(231, 81, 81);
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -63,5 +64,5 @@
 }
 
 .contact-form button:hover {
-    background: #d96500;
+    background: rgb(194, 197, 127);
 }
