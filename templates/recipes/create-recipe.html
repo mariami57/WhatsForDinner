@@ -25,6 +25,21 @@
         {{ form.ingredients.errors }}
     </div>
 
+    <div class="times">
+         <div class="generic-div">
+            {{ form.prep_time.label_tag }}
+            {{ form.prep_time }}
+            {{ form.prep_time.errors }}
+        </div>
+        <div class="generic-div">
+            {{ form.cook_time.label_tag }}
+            {{ form.cook_time }}
+            {{ form.cook_time.errors }}
+        </div>
+    </div>
+
+
+
     <div class="image-div">
         {{ form.image.label_tag }}
         {{ form.image }}

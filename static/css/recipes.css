@@ -100,3 +100,14 @@
     width:300px;
     height:auto;
 }
+
+.times {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px;
+}
+
+.times .generic-div input{
+    width:50%;
+}
