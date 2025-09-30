@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: "Roboto", sans-serif;
 }
 
 main {
@@ -20,7 +21,6 @@ main {
     text-align: center;
     padding: 20px;
     margin: 0;
-    font-family: "Roboto", sans-serif;
     font-weight: 700;
 }
 
@@ -55,7 +55,6 @@ a {
 }
 
 .intro-section p {
-    font-family: "Roboto", sans-serif;
     font-size:1.5rem;
 }
 
@@ -75,7 +74,6 @@ footer{
 
 .social-media p {
     margin: 0;
-    font-family: "Roboto", sans-serif;
     font-size:1.5rem;
     color: rgb(231, 81, 81);
     font-weight:800;
@@ -108,13 +106,11 @@ footer{
 .links {
     display:flex;
     flex-direction: column;
-    font-family: "Roboto", sans-serif;
     font-weight:800;
     gap:30px;
 }
 
 .credentials {
     margin: 0;
-    font-family: "Roboto", sans-serif;
     font-weight:800;
 }

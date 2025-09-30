@@ -8,9 +8,9 @@
     border-radius:15px;
     width:30%;
     padding:20px;
-    font-family: "Roboto", sans-serif;
     background: #fefae9;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
 
 }
 
@@ -95,6 +95,10 @@
     justify-content: center;
     align-items: center;
     gap:50px;
+    background: #fefae9;
+    border-radius:12px;
+    padding: 20px;
+    border: 2px solid rgb(239, 154, 154);
 
 }
 
@@ -103,7 +107,7 @@
     height:auto;
 }
 
-.times {
+.times, .recipe-details {
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -112,4 +116,26 @@
 
 .times .generic-div input{
     width:90%;
+}
+
+.recipe-details {
+    border-radius: 15px;
+    width:50%;
+    position: relative;
+    padding: 10px 10px;
+    border-left: 2px solid rgb(231, 81, 81);
+    border-right: 2px solid rgb(231, 81, 81);
+    border-bottom: 2px solid rgb(231, 81, 81);
+}
+
+.recipe-details::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: -.0625rem;
+    left: -.0625rem;
+    width: calc(100% + .125rem);
+    border-top: 12px solid rgb(231, 81, 81);
+    border-radius: 4px 4px 0 0;
+    z-index:1000;
 }
