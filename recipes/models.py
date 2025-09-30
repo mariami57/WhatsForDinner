@@ -10,6 +10,7 @@ class Recipe(models.Model):
     ingredients = models.TextField(max_length=1000)
     prep_time = models.PositiveIntegerField()
     cook_time = models.PositiveIntegerField()
+    servings = models.PositiveIntegerField()
 
     @property
     def total_time(self):

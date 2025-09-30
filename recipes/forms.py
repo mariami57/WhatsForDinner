@@ -6,7 +6,7 @@ from recipes.models import Recipe
 class RecipeBaseForm(forms.ModelForm):
     class Meta:
         model = Recipe
-        fields =  ['title', 'prep_time', 'cook_time', 'instructions', 'ingredients']
+        fields =  ['title', 'prep_time', 'cook_time', 'instructions', 'ingredients', 'image', 'servings']
 
         labels = {
             'title': 'Recipe title:',
@@ -14,22 +14,25 @@ class RecipeBaseForm(forms.ModelForm):
             'instructions': 'Instructions:',
             'ingredients': 'Ingredients:',
             'prep_time':'Prep time:',
-            'cook_time': 'Cook time',
+            'cook_time': 'Cooking time:',
+            'servings': 'Servings'
+
         }
 
         widgets = {
-            'instructions': forms.Textarea(attrs={'rows': 3,
-                'cols': 50}),
-            'ingredients': forms.Textarea(attrs={'rows': 3,
-                'cols': 50}),
+            'instructions': forms.Textarea(attrs={'rows': 5,
+                'cols': 40, 'placeholder':'Add instructions here'}),
+            'ingredients': forms.Textarea(attrs={'rows': 5,
+                'cols': 40, 'placeholder':'One ingredient per line:\nSugar\nFlour\nMilk'}),
+            'prep_time': forms.NumberInput(attrs= {
+                'placeholder':'In minutes'
+            }),
+            'cook_time': forms.NumberInput(attrs= {
+                'placeholder':'In minutes'}),
+            'servings':forms.NumberInput(attrs= {
+                'placeholder':'Number of servings'}),
         }
 
-        placeholder= {
-            'instructions':'Add instructions here',
-            'ingredients': 'One ingredient per line:\nSugar\nFlour\nMilk',
-            'prep_time': 'Preparation time in minutes:',
-            'cook_time': 'Cooking time in minutes'
-        }
 
 class RecipeCreateForm(RecipeBaseForm):
     pass

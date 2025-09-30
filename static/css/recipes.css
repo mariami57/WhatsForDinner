@@ -33,6 +33,8 @@
     justify-content: center;
     align-items: center;
     gap:3px;
+    margin-top:10px;
+    margin-bottom: 10px;
 }
 
 .generic-div input, .generic-div textarea{
@@ -109,5 +111,5 @@
 }
 
 .times .generic-div input{
-    width:50%;
+    width:90%;
 }
