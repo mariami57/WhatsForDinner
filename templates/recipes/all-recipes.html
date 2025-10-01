@@ -33,6 +33,13 @@
                 </ul>
             </div>
 
+            {% if request.user == recipe.user %}
+
+            <div class="buttons">
+                <a href='#'><i class="fa-solid fa-pencil"></i></a>
+                <button><i class="fa-solid fa-trash"></i></button>
+            </div>
+
         </div>
 
 
