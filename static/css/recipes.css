@@ -98,6 +98,8 @@
     border-radius:12px;
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: relative;
+
 
 }
 
@@ -151,4 +153,25 @@
     width: calc(100% + .125rem);
     border-top: 12px solid rgb(231, 81, 81);
     z-index:1000;
+}
+
+.recipe-container .buttons {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.recipe-container .buttons a,
+.recipe-container .buttons button {
+    background: none;
+    border:none;
+    cursor: pointer;
+    color: rgb(231, 81, 81);
+
+}
+
+.recipe-container .buttons a:hover,
+.recipe-container .buttons button:hover {
+    color: rgb(194, 197, 127);
+
 }

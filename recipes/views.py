@@ -1,11 +1,14 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView, UpdateView
+
+from common.mixins import UserIsOwnerMixin
 from recipes.forms import RecipeCreateForm, RecipeUpdateForm
 from recipes.models import Recipe
 
 
 # Create your views here.
-class RecipeCreateView(CreateView):
+class RecipeCreateView(LoginRequiredMixin, CreateView):
     model = Recipe
     form_class = RecipeCreateForm
     success_url = reverse_lazy('all-recipes')
@@ -17,7 +20,7 @@ class RecipesListView(ListView):
     template_name = 'recipes/all-recipes.html'
 
 
-class RecipeEditView(UpdateView):
+class RecipeEditView(LoginRequiredMixin, UserIsOwnerMixin, UpdateView):
     model = Recipe
     form_class = RecipeUpdateForm
     template_name = 'recipes/update-recipe.html'
