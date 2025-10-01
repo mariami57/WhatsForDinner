@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 
 from decouple import config
+from django.urls import reverse_lazy
 
 ENV = config('DJANGO_ENV', default='dev')
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -150,3 +151,6 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'accounts.WebUser'
+
+LOGIN_REDIRECT_URL = reverse_lazy('home')
+LOGOUT_REDIRECT_URL = reverse_lazy('home')

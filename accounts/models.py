@@ -20,3 +20,15 @@ class WebUser(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         return self.username
 
+class Profile(models.Model):
+    user = models.OneToOneField(WebUser, on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    bio_info = models.TextField()
+    profile_picture = models.ImageField(blank=True, null=True)
+
+    @property
+    def full_name(self):
+        full_name = f"{self.first_name or ''} {self.last_name or ''}".strip()
+        return full_name if full_name else ''
+
