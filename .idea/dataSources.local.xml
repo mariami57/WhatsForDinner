@@ -14,9 +14,10 @@
             <node kind="database" qname="@">
               <node kind="schema" qname="@" />
             </node>
-            <node kind="database" qname="dinner">
+            <node kind="database" qname="dinner3">
               <node kind="schema" negative="1" />
             </node>
+            <node kind="database" qname="dinner" />
           </node>
         </introspection-scope>
       </schema-mapping>

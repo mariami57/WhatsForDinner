@@ -42,6 +42,7 @@ CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS').split(',')
 PROJECT_APPS = [
     'recipes',
     'common',
+    'accounts',
 ]
 
 INSTALLED_APPS = [
@@ -147,3 +148,5 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'accounts.WebUser'
