@@ -2,11 +2,47 @@
 {% load static %}
 
 {% block content %}
-    <form method="POST">
+    <form method="POST" class="recipe-form">
         {% csrf_token %}
         {{ form.non_field_errors }}
+        <h1>Register</h1>
+        <div class="generic-div">
+            {{ form.username.label_tag }}
+            {% if  form.username.errors%}
+                <p class="error-field">{{ form.username.errors|striptags }}</p>
+            {% endif %}
+            {{ form.username }}
 
-        {{ form }}
+        </div>
+
+        <div class="generic-div">
+            {{ form.email.label_tag }}
+            {% if form.email.errors %}
+                <p class="error-field">{{ form.email.errors|striptags }}</p>
+            {% endif %}
+            {{ form.email }}
+
+        </div>
+
+        <div class="generic-div">
+            {{ form.password1.label_tag }}
+            {% if form.password1.errors %}
+                <p class="error-field">{{ form.password1.errors|striptags }}</p>
+            {% endif %}
+            {{ form.password1 }}
+
+        </div>
+
+
+        <div class="generic-div">
+            {{ form.password2.label_tag }}
+            {% if form.password2.errors%}
+                <p class="error-field">{{ form.password2.errors|striptags }}</p>
+            {% endif %}
+            {{ form.password2 }}
+        </div>
+        <button>Submit</button>
+
     </form>
 
 {% endblock %}

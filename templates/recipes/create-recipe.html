@@ -9,38 +9,44 @@
 
     <div class="generic-div">
         {{ form.title.label_tag }}
-        {{ form.title }}
         {{ form.title.errors }}
+        {{ form.title }}
+
     </div>
 
     <div class="generic-div">
         {{ form.instructions.label_tag }}
-        {{ form.instructions }}
         {{ form.instructions.errors }}
+        {{ form.instructions }}
+
     </div>
 
     <div class="generic-div">
         {{ form.ingredients.label_tag }}
-        {{ form.ingredients }}
         {{ form.ingredients.errors }}
+        {{ form.ingredients }}
+
     </div>
 
     <div class="times">
          <div class="generic-div">
             {{ form.prep_time.label_tag }}
+             {{ form.prep_time.errors }}
             {{ form.prep_time }}
-            {{ form.prep_time.errors }}
+
         </div>
         <div class="generic-div">
             {{ form.cook_time.label_tag }}
-            {{ form.cook_time }}
             {{ form.cook_time.errors }}
+            {{ form.cook_time }}
+
         </div>
 
         <div class="generic-div">
             {{ form.servings.label_tag }}
-            {{ form.servings }}
             {{ form.servings.errors }}
+            {{ form.servings }}
+
         </div>
     </div>
 
@@ -48,8 +54,9 @@
 
     <div class="image-div">
         {{ form.image.label_tag }}
-        {{ form.image }}
         {{ form.image.errors }}
+        {{ form.image }}
+
     </div>
 
     <button>Submit</button>
