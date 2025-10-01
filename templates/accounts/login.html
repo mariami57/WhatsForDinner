@@ -2,24 +2,39 @@
 {% load static %}
 
 {% block content %}
-    <form method="POST" class="recipe-form">
-        {% csrf_token %}
-        <h1>Log In</h1>
+    {% if not request.user.is_authenticated %}
+        {% if messages %}
+           {% for message in messages %}
+               <p class="error-field">
+                {{ message }}
+               </p>
+           {% endfor %}
+        {% endif %}
+        <form method="POST" class="recipe-form">
+            {% csrf_token %}
+            <h1>Log In</h1>
 
-        <div class="generic-div">
-            {{ form.username.label_tag }}
-            {{ form.username.errors }}
-            {{ form.username }}
 
-        </div>
 
-        <div class="generic-div">
-            {{ form.password.label_tag }}
-            {{ form.password.errors }}
-            {{ form.password }}
+            <div class="generic-div">
+                {{ form.username.label_tag }}
+                {% if  form.username.errors%}
+                    <p class="error-field">{{ form.username.errors|striptags }}</p>
+                {% endif %}
+                {{ form.username }}
 
-        </div>
-        <a href="{% url 'register' %}" class="hyperlink">Don`t have an account? Click here to register</a>
-        <button>Submit</button>
-    </form>
+            </div>
+
+            <div class="generic-div">
+                {{ form.password.label_tag }}
+                 {% if form.password.errors %}
+                    <p class="error-field">{{ form.password.errors|striptags }}</p>
+                {% endif %}
+                {{ form.password }}
+
+            </div>
+            <a href="{% url 'register' %}" class="hyperlink">Don`t have an account? Click here to register</a>
+            <button>Submit</button>
+        </form>
+    {% endif %}
 {% endblock %}

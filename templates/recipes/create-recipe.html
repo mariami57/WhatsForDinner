@@ -9,21 +9,27 @@
 
     <div class="generic-div">
         {{ form.title.label_tag }}
-        {{ form.title.errors }}
+        {% if form.title.errors %}
+            <p class="error-field">{{ form.title.errors|striptags }}</p>
+        {% endif %}
         {{ form.title }}
 
     </div>
 
     <div class="generic-div">
         {{ form.instructions.label_tag }}
-        {{ form.instructions.errors }}
+        {% if form.instructions.errors %}
+            <p class="error-field">{{ form.instructions.errors|striptags }}</p>
+        {% endif %}
         {{ form.instructions }}
 
     </div>
 
     <div class="generic-div">
         {{ form.ingredients.label_tag }}
-        {{ form.ingredients.errors }}
+        {% if form.ingredients.errors %}
+            <p class="error-field">{{ form.ingredients.errors|striptags }}</p>
+        {% endif %}
         {{ form.ingredients }}
 
     </div>
@@ -31,20 +37,26 @@
     <div class="times">
          <div class="generic-div">
             {{ form.prep_time.label_tag }}
-             {{ form.prep_time.errors }}
+             {% if form.prep_time.errors %}
+                <p class="error-field">{{ form.prep_time.errors|striptags }}</p>
+            {% endif %}
             {{ form.prep_time }}
 
         </div>
         <div class="generic-div">
             {{ form.cook_time.label_tag }}
-            {{ form.cook_time.errors }}
+            {% if form.cook_time.errors %}
+                <p class="error-field">{{ form.cook_time.errors|striptags }}</p>
+            {% endif %}
             {{ form.cook_time }}
 
         </div>
 
         <div class="generic-div">
             {{ form.servings.label_tag }}
-            {{ form.servings.errors }}
+            {% if form.servings.errors %}
+                <p class="error-field">{{ form.servings.errors|striptags }}</p>
+            {% endif %}
             {{ form.servings }}
 
         </div>
@@ -54,7 +66,9 @@
 
     <div class="image-div">
         {{ form.image.label_tag }}
-        {{ form.image.errors }}
+        {% if form.image.errors %}
+            <p class="error-field">{{ form.image.errors|striptags }}</p>
+        {% endif %}
         {{ form.image }}
 
     </div>

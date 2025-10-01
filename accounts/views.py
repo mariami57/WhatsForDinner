@@ -11,7 +11,7 @@ from accounts.models import WebUser
 class RegisterView(CreateView):
     model = WebUser
     form_class=WebUserCreationForm
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('login')
     template_name = 'accounts/register.html'
     #Uses signal to create a profile for the user
 
