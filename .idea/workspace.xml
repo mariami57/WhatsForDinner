@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8b7d703-4829-4b30-a099-4fb827c3ed1c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b980b3ac-76f6-4616-a797-383c4f778a31.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b980b3ac-76f6-4616-a797-383c4f778a31.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b980b3ac-76f6-4616-a797-383c4f778a31/storage_v2/_src_/database/dinner3.AaJdYw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b980b3ac-76f6-4616-a797-383c4f778a31/storage_v2/_src_/database/dinner3.AaJdYw/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatsForDinner/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsForDinner/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatsForDinner/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsForDinner/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/common/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/nav.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +109,7 @@
       <workItem from="1759083681279" duration="331000" />
       <workItem from="1759155842616" duration="2830000" />
       <workItem from="1759246890270" duration="8574000" />
-      <workItem from="1759323514551" duration="6519000" />
+      <workItem from="1759323514551" duration="7754000" />
     </task>
     <servers />
   </component>
