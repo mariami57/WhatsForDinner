@@ -1,4 +1,7 @@
+from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import HttpResponseForbidden
+from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView, UpdateView
 
@@ -29,9 +32,19 @@ class RecipeEditView(LoginRequiredMixin, UserIsOwnerMixin, UpdateView):
     def get_form_kwargs(self):
         kwargs = super().get_form_kwargs()
         kwargs['instance'] = self.get_object()
-        kwargs['request'] = self.request
         return kwargs
 
+
+def delete_recipe(request, pk):
+    recipe = Recipe.objects.get(pk=pk)
+    if request.user.pk == recipe.user.pk:
+        recipe.delete()
+        next_url = request.POST.get('next') or request.GET.get('next')
+        if next_url:
+            return redirect(next_url)
+        return redirect('home')
+    else:
+        return HttpResponseForbidden('You are not allowed to delete this recipe')
 
 
 

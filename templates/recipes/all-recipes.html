@@ -35,8 +35,8 @@
 
             {% if request.user.pk == recipe.user.pk %}
                 <div class="buttons">
-                    <a href='#'><i class="fa-solid fa-pencil"></i></a>
-                    <button><i class="fa-solid fa-trash"></i></button>
+                    <a href="{% url 'update' pk=recipe.pk %}"><i class="fa-solid fa-pencil"></i></a>
+                    <a href="{% url 'delete' pk=recipe.pk %}?next={% url 'all-recipes' %}"><i class="fa-solid fa-trash"></i></a>
                 </div>
             {% endif %}
 
