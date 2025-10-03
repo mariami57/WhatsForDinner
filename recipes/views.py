@@ -71,3 +71,11 @@ def toggle_favourite(request, pk):
     else:
         recipe.favourited_by.add(request.user)
         return JsonResponse({'favourited': True})
+
+class MyFavouriteRecipesView(LoginRequiredMixin, ListView):
+    model = Recipe
+    template_name= 'recipes/favourite-recipes.html'
+    context_object_name='favourite_recipes'
+
+    def get_queryset(self):
+        return self.request.user.favourite_recipes.all()
