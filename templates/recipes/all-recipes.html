@@ -33,19 +33,27 @@
                 </ul>
             </div>
 
-            {% if request.user.pk == recipe.user.pk %}
-                <div class="buttons">
-                    <a href="{% url 'update' pk=recipe.pk %}"><i class="fa-solid fa-pencil"></i></a>
-                    <a href="{% url 'delete' pk=recipe.pk %}?next={% url 'all-recipes' %}"><i class="fa-solid fa-trash"></i></a>
-                </div>
-            {% endif %}
 
+                <div class="buttons">
+                    {% if request.user.pk == recipe.user.pk %}
+                        <a href="{% url 'update' pk=recipe.pk %}"><i class="fa-solid fa-pencil"></i></a>
+                        <a href="{% url 'delete' pk=recipe.pk %}?next={% url 'all-recipes' %}"><i class="fa-solid fa-trash"></i></a>
+                    {% endif %}
+                    <div class="favourite-btn" data-recipe-id="{{ recipe.id }}">
+                        {% if request.user in recipe.favourited_by.all %}
+                            <i class="fa-solid fa-heart-circle-plus"></i>
+                        {% else %}
+                            <i class="fa-solid fa-heart-circle-minus"></i>
+                        {% endif %}
+                    </div>
+                </div>
 
         </div>
-
-
 
     {% empty %}
         <h1>No recipes to show</h1>
     {% endfor %}
+
+
+
 {% endblock %}

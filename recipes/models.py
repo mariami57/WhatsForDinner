@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.db import models
 
@@ -13,6 +14,11 @@ class Recipe(models.Model):
     prep_time = models.PositiveIntegerField()
     cook_time = models.PositiveIntegerField()
     servings = models.PositiveIntegerField()
+    favourited_by = models.ManyToManyField(
+        settings.AUTH_USER_MODEL,
+        related_name='favourite_recipes',
+        blank=True
+    )
 
     @property
     def total_time(self):
