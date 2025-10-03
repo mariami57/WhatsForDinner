@@ -4,6 +4,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseForbidden, JsonResponse
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
+from django.views.decorators.http import require_POST
 from django.views.generic import CreateView, ListView, UpdateView
 
 from common.mixins import UserIsOwnerMixin
@@ -61,6 +62,7 @@ class MyRecipesListView(ListView):
         return Recipe.objects.filter(user = self.request.user)
 
 @login_required
+@require_POST
 def toggle_favourite(request, pk):
     recipe = Recipe.objects.get(pk=pk)
     if request.user in recipe.favourited_by.all():
