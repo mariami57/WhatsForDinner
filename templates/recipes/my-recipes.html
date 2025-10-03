@@ -1,0 +1,51 @@
+{%  extends 'common/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    {% for recipe in my_recipes_list %}
+        <div class="recipe-container">
+             <div class="recipe-img">
+                {% if recipe.image %}
+                    <img src="{{ recipe.image.url }}" alt="recipe-image">
+                {% endif %}
+            </div>
+            <div class="recipe-info">
+                 <h1>{{ recipe.title }}</h1>
+                <div class="recipe-details">
+                    <p><b>Prep Time: </b>{{ recipe.prep_time }}</p>
+                    <p><b>Cooking Time: </b>{{ recipe.cook_time }}</p>
+                    <p><b>Total Time: </b>{{ recipe.total_time }}</p>
+                    <p><b>Servings: </b>{{ recipe.servings }}</p>
+                </div>
+
+
+                <h2>Instructions:</h2>
+                <p>{{ recipe.instructions }}</p>
+
+                <h2>Ingredients:</h2>
+                <ul>
+                  {% for ingredient in recipe.ingredients.splitlines %}
+                    {% if ingredient %}
+                      <li>{{ ingredient }}</li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+            </div>
+
+            {% if request.user.pk == recipe.user.pk %}
+                <div class="buttons">
+                    <a href="{% url 'update' pk=recipe.pk %}"><i class="fa-solid fa-pencil"></i></a>
+                    <a href="{% url 'delete' pk=recipe.pk %}?next={% url 'all-recipes' %}"><i class="fa-solid fa-trash"></i></a>
+                </div>
+            {% endif %}
+
+
+        </div>
+
+
+
+    {% empty %}
+        <h1>No recipes to show</h1>
+    {% endfor %}
+{% endblock %}

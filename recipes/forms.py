@@ -33,6 +33,10 @@ class RecipeBaseForm(forms.ModelForm):
                 'placeholder':'Number of servings'}),
         }
 
+    def __init__(self, *args, **kwargs):
+        self.user = kwargs.pop('user', None)
+        super().__init__(*args, **kwargs)
+
 
 class RecipeCreateForm(RecipeBaseForm):
     pass

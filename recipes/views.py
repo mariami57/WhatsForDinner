@@ -17,6 +17,10 @@ class RecipeCreateView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('all-recipes')
     template_name = 'recipes/create-recipe.html'
 
+    def form_valid(self, form):
+        form.instance.user =self.request.user
+        return super().form_valid(form)
+
 
 class RecipesListView(ListView):
     model = Recipe
@@ -48,3 +52,10 @@ def delete_recipe(request, pk):
 
 
 
+class MyRecipesListView(ListView):
+    model = Recipe
+    template_name = 'recipes/my-recipes.html'
+    context_object_name = 'my_recipes_list'
+
+    def get_queryset(self):
+        return Recipe.objects.filter(user = self.request.user)

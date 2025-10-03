@@ -114,3 +114,10 @@ footer{
     margin: 0;
     font-weight:800;
 }
+
+.error-field{
+    background-color: #e86464;
+    padding: 10px;
+    border-radius:12px;
+    text-align:center;
+}

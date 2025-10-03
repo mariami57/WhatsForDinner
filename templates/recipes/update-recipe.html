@@ -1,4 +1,75 @@
 {%  extends 'common/base.html' %}
 
 {% block content %}
+    <form method="POST" enctype="multipart/form-data" class="recipe-form">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <h1> Update Recipe</h1>
+
+        <div class="generic-div">
+            {{ form.title.label_tag }}
+            {% if form.title.errors %}
+                <p class="error-field">{{ form.title.errors|striptags }}</p>
+            {% endif %}
+            {{ form.title }}
+
+        </div>
+
+        <div class="generic-div">
+            {{ form.instructions.label_tag }}
+            {% if form.instructions.errors %}
+                <p class="error-field">{{ form.instructions.errors|striptags }}</p>
+            {% endif %}
+            {{ form.instructions }}
+
+        </div>
+
+        <div class="generic-div">
+            {{ form.ingredients.label_tag }}
+            {% if form.ingredients.errors %}
+                <p class="error-field">{{ form.ingredients.errors|striptags }}</p>
+            {% endif %}
+            {{ form.ingredients }}
+
+        </div>
+
+        <div class="times">
+             <div class="generic-div">
+                {{ form.prep_time.label_tag }}
+                 {% if form.prep_time.errors %}
+                    <p class="error-field">{{ form.prep_time.errors|striptags }}</p>
+                {% endif %}
+                {{ form.prep_time }}
+
+            </div>
+            <div class="generic-div">
+                {{ form.cook_time.label_tag }}
+                {% if form.cook_time.errors %}
+                    <p class="error-field">{{ form.cook_time.errors|striptags }}</p>
+                {% endif %}
+                {{ form.cook_time }}
+
+            </div>
+
+            <div class="generic-div">
+                {{ form.servings.label_tag }}
+                {% if form.servings.errors %}
+                    <p class="error-field">{{ form.servings.errors|striptags }}</p>
+                {% endif %}
+                {{ form.servings }}
+
+            </div>
+        </div>
+
+        <div class="edit-image-div">
+            {{ form.image.label_tag }}
+            {% if form.image.errors %}
+                <p class="error-field">{{ form.image.errors|striptags }}</p>
+            {% endif %}
+            {{ form.image }}
+
+        </div>
+
+        <button>Submit</button>
+    </form>
 {% endblock %}

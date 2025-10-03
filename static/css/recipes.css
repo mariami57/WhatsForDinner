@@ -1,93 +1,3 @@
-.recipe-form {
-    display:flex;
-    margin: 50px auto;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-    gap:20px;
-    border-radius:15px;
-    width:30%;
-    padding:20px;
-    background: #fefae9;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-
-
-}
-
-.recipe-form h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #333;
-}
-
-.recipe-form .generic-div{
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-    text-align:center;
-}
-
-.recipe-form .image-div{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    gap:3px;
-    margin-top:10px;
-    margin-bottom: 10px;
-}
-
-.generic-div input, .generic-div textarea{
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-}
-
-.generic-div input:focus,
-.generic-div textarea:focus {
-    border-color: rgb(231, 81, 81);
-    outline: none;
-    box-shadow: 0 0 5px rgba(247,127,0,0.3);
-}
-
-.generic-div  label, .image-div label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: #444;
-}
-
-.recipe-form button {
-    padding: 0.8rem 2rem;
-    background: rgb(231, 81, 81);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.recipe-form input[type="file"]::file-selector-button {
-    padding: 0.4rem 1.8rem;
-    background: rgb(231, 81, 81);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-
-}
-
-.recipe-form button:hover, .recipe-form input[type="file"]::file-selector-button:hover {
-    background-color: rgb(194, 197, 127);
-    cursor:pointer;
-}
-
-
 .recipe-container {
     width:80%;
     display:flex;
@@ -159,10 +69,12 @@
     position: absolute;
     right: 10px;
     top: 10px;
+    padding: 10px;
+    display:flex;
+    gap:10px;
 }
 
-.recipe-container .buttons a,
-.recipe-container .buttons button {
+.recipe-container .buttons a {
     background: none;
     border:none;
     cursor: pointer;
@@ -170,8 +82,6 @@
 
 }
 
-.recipe-container .buttons a:hover,
-.recipe-container .buttons button:hover {
+.recipe-container .buttons a:hover{
     color: rgb(194, 197, 127);
-
 }
