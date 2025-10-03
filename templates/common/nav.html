@@ -15,25 +15,28 @@
                 <a href="{%  url 'home' %}">Home</a>
             </li>
 
-            <li class="dropdown {% if request.resolver_match.url_name == 'all-recipes' %}open{% endif %}">
+            <li>
                 <a href="{%  url 'all-recipes' %}">Recipes</a>
-                <ul class="dropdown-menu">
-                    <li class="tooltip-container"><a href="{% url 'create-recipe' %}">
-                        <i class="fa-solid fa-circle-plus"></i>
-                        <span class="tooltip-text">Add Recipe</span>
-                    </a></li>
-                    <li class="tooltip-container"><a href="{% url 'my-recipes' %}">
-                        <i class="fa-solid fa-book"></i>
-                        <span class="tooltip-text">My Recipes</span>
-                    </a></li>
-                    <li class="tooltip-container"><a href="{% url 'favourite-recipes' %}">
-                        <i class="fa-solid fa-heart"></i>
-                        <span class="tooltip-text">Favourite Recipies</span>
-                    </a></li>
-                </ul>
             </li>
 
             {% if request.user.is_authenticated %}
+                <li class="dropdown {% if request.resolver_match.url_name in 'all-recipes my-recipes favourite-recipes' %}open{% endif %}">
+                    <a href="{%  url 'all-recipes' %}">Recipes</a>
+                    <ul class="dropdown-menu">
+                        <li class="tooltip-container"><a href="{% url 'create-recipe' %}">
+                            <i class="fa-solid fa-circle-plus"></i>
+                            <span class="tooltip-text">Add Recipe</span>
+                        </a></li>
+                        <li class="tooltip-container"><a href="{% url 'my-recipes' %}">
+                            <i class="fa-solid fa-book"></i>
+                            <span class="tooltip-text">My Recipes</span>
+                        </a></li>
+                        <li class="tooltip-container"><a href="{% url 'favourite-recipes' %}">
+                            <i class="fa-solid fa-heart"></i>
+                            <span class="tooltip-text">Favourite Recipies</span>
+                        </a></li>
+                    </ul>
+                </li>
                 <li>
                     <a href="#">Profile</a>
                 </li>

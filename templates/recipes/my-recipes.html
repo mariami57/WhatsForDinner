@@ -58,4 +58,35 @@
     {% empty %}
         <h1>No recipes to show</h1>
     {% endfor %}
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll(".favourite-btn").forEach(btn => {
+        btn.addEventListener("click", function() {
+            const recipeId = this.dataset.recipeId;
+            const icon = this.querySelector("i");
+
+            fetch(`/recipes/${recipeId}/toggle-favourite/`, {
+                method: "POST",
+                headers: {
+                    "X-CSRFToken": "{{ csrf_token }}",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({})
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.favourited) {
+                    icon.classList.remove("fa-regular");
+                    icon.classList.add("fa-solid");
+                } else {
+                    icon.classList.remove("fa-solid");
+                    icon.classList.add("fa-regular");
+                }
+            });
+        });
+    });
+});
+</script>
+
 {% endblock %}
