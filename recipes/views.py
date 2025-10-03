@@ -1,6 +1,7 @@
 from django.contrib.auth import get_user_model
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.http import HttpResponseForbidden
+from django.http import HttpResponseForbidden, JsonResponse
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView, UpdateView
@@ -51,7 +52,6 @@ def delete_recipe(request, pk):
         return HttpResponseForbidden('You are not allowed to delete this recipe')
 
 
-
 class MyRecipesListView(ListView):
     model = Recipe
     template_name = 'recipes/my-recipes.html'
@@ -59,3 +59,13 @@ class MyRecipesListView(ListView):
 
     def get_queryset(self):
         return Recipe.objects.filter(user = self.request.user)
+
+@login_required
+def toggle_favourite(request, pk):
+    recipe = Recipe.objects.get(pk=pk)
+    if request.user in recipe.favourited_by.all():
+        recipe.favourited_by.remove(request.user)
+        return JsonResponse({'favourited': False})
+    else:
+        recipe.favourited_by.add(request.user)
+        return JsonResponse({'favourited': True})

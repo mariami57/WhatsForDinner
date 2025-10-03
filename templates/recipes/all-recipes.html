@@ -39,14 +39,19 @@
                         <a href="{% url 'update' pk=recipe.pk %}"><i class="fa-solid fa-pencil"></i></a>
                         <a href="{% url 'delete' pk=recipe.pk %}?next={% url 'all-recipes' %}"><i class="fa-solid fa-trash"></i></a>
                     {% endif %}
+                </div>
+                <div class="favourite">
                     <div class="favourite-btn" data-recipe-id="{{ recipe.id }}">
                         {% if request.user in recipe.favourited_by.all %}
-                            <i class="fa-solid fa-heart-circle-minus"></i>
+                            <i class="fa-solid fa-heart"></i>
                         {% else %}
-                            <i class="fa-solid fa-heart-circle-plus"></i>
+                            <i class="fa-regular fa-heart"></i>
                         {% endif %}
                     </div>
+
                 </div>
+
+
 
         </div>
 
@@ -56,27 +61,29 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll(".favourite-btn").forEach( btn => {
-        const recipeId = this.dataset.recipeId;
-        const icon = this.querySelector("i");
+    document.querySelectorAll(".favourite-btn").forEach(btn => {
+        btn.addEventListener("click", function() {
+            const recipeId = this.dataset.recipeId;
+            const icon = this.querySelector("i");
 
-        fetch(`/recipes/${recipeId}/toggle-favourite`, {
-            method: "POST",
-            headers: {
-                "X-CSRFToken": "{{ csrf_token }}",
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({})
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.favourited) {
-                icon.classList.remove("fa-regular");
-                icon.classList.add("fa-solid");
-            } else {
-                icon.classList.remove("fa-solid");
-                icon.classList.add("fa-regular");
-            }
+            fetch(`/recipes/${recipeId}/toggle-favourite/`, {
+                method: "POST",
+                headers: {
+                    "X-CSRFToken": "{{ csrf_token }}",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({})
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.favourited) {
+                    icon.classList.remove("fa-regular");
+                    icon.classList.add("fa-solid");
+                } else {
+                    icon.classList.remove("fa-solid");
+                    icon.classList.add("fa-regular");
+                }
+            });
         });
     });
 });
