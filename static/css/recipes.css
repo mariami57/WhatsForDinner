@@ -74,7 +74,18 @@
     gap:10px;
 }
 
-.recipe-container .buttons a {
+
+.fa-heart-circle-minus, .fa-heart-circle-plus {
+    position: absolute;
+    right: -15px;
+    top: -0.8px;
+    padding: 10px;
+    display:flex;
+    gap:10px;
+}
+
+
+.recipe-container .buttons a, .fa-heart-circle-minus, .fa-heart-circle-plus {
     background: none;
     border:none;
     cursor: pointer;
@@ -82,6 +93,6 @@
 
 }
 
-.recipe-container .buttons a:hover{
+.recipe-container .buttons a:hover, .fa-heart-circle-minus, .fa-heart-circle-plus:hover{
     color: rgb(194, 197, 127);
 }

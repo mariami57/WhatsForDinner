@@ -41,9 +41,9 @@
                     {% endif %}
                     <div class="favourite-btn" data-recipe-id="{{ recipe.id }}">
                         {% if request.user in recipe.favourited_by.all %}
-                            <i class="fa-solid fa-heart-circle-plus"></i>
-                        {% else %}
                             <i class="fa-solid fa-heart-circle-minus"></i>
+                        {% else %}
+                            <i class="fa-solid fa-heart-circle-plus"></i>
                         {% endif %}
                     </div>
                 </div>
@@ -54,6 +54,33 @@
         <h1>No recipes to show</h1>
     {% endfor %}
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll(".favourite-btn").forEach( btn => {
+        const recipeId = this.dataset.recipeId;
+        const icon = this.querySelector("i");
+
+        fetch(`/recipes/${recipeId}/toggle-favourite`, {
+            method: "POST",
+            headers: {
+                "X-CSRFToken": "{{ csrf_token }}",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({})
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.favourited) {
+                icon.classList.remove("fa-regular");
+                icon.classList.add("fa-solid");
+            } else {
+                icon.classList.remove("fa-solid");
+                icon.classList.add("fa-regular");
+            }
+        });
+    });
+});
+</script>
 
 
 {% endblock %}
