@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a8b7d703-4829-4b30-a099-4fb827c3ed1c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/common/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/recipes/favourite-recipes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recipes/favourite-recipes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/recipes/my-recipes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recipes/my-recipes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/recipes/all-recipes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recipes/all-recipes.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +23,8 @@
       <list>
         <option value="Python Script" />
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -119,7 +119,7 @@
       <workItem from="1759323514551" duration="7754000" />
       <workItem from="1759334853817" duration="8497000" />
       <workItem from="1759397198798" duration="3494000" />
-      <workItem from="1759482538241" duration="10073000" />
+      <workItem from="1759482538241" duration="11316000" />
     </task>
     <servers />
   </component>

@@ -40,14 +40,16 @@
                         <a href="{% url 'delete' pk=recipe.pk %}?next={% url 'all-recipes' %}"><i class="fa-solid fa-trash"></i></a>
                     {% endif %}
                 </div>
-                <div class="favourite">
-                    <div class="favourite-btn" data-recipe-id="{{ recipe.id }}">
-                        {% if request.user in recipe.favourited_by.all %}
-                            <i class="fa-solid fa-heart"></i>
-                        {% else %}
-                            <i class="fa-regular fa-heart"></i>
-                        {% endif %}
-                    </div>
+                {%  if request.user.is_authenticated %}
+                    <div class="favourite">
+                        <div class="favourite-btn" data-recipe-id="{{ recipe.id }}">
+                            {% if request.user in recipe.favourited_by.all %}
+                                <i class="fa-solid fa-heart"></i>
+                            {% else %}
+                                <i class="fa-regular fa-heart"></i>
+                            {% endif %}
+                        </div>
+                {% endif %}
 
                 </div>
 
