@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-    <form method="POST" enctype="multipart/form-data" class="recipe-form">
+    <div class="recipe-form">
         {% if request.user.profile.profile_picture  %}
             <div class="profile-pic">
                 <img src="{{ request.user.profile.profile_picture.url }}" alt="profile-pic">
@@ -17,11 +17,11 @@
 
         <div class="buttons">
             {% if request.user.pk == user.profile.pk %}
-                <a href="{% url 'update' pk=request.user.pk %}"><i class="fa-solid fa-pencil"></i></a>
+                <a href="{% url 'profile-edit' pk=request.user.pk %}"><i class="fa-solid fa-pencil"></i></a>
                 <a href="{% url 'delete' pk=request.user.pk %}?next={% url 'all-recipes' %}"><i class="fa-solid fa-trash"></i></a>
             {% endif %}
         </div>
 
-    </form>
+    </div>
 
 {% endblock %}

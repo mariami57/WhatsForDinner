@@ -1,0 +1,64 @@
+{% extends 'common/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <form method="POST" enctype="multipart/form-data" class="recipe-form">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <h1>Edit Profile</h1>
+
+         <div class="image-div">
+            {{ form.image.label_tag }}
+            {% if form.profile_picture.errors %}
+                <p class="error-field">{{ form.profile_picture.errors|striptags }}</p>
+            {% endif %}
+            {{ form.image }}
+         </div>
+
+
+        <div class="generic-div">
+            {{ form.request.user.username.label_tag }}
+            {% if form.request.user.username.errors %}
+                <p class="error-field">{{ form.request.user.username.errors|striptags }}</p>
+            {% endif %}
+            {{ form.request.user.username }}
+        </div>
+
+        <div class="generic-div">
+            {{ form.request.user.email.label_tag }}
+            {% if form.request.user.email.errors %}
+                <p class="error-field">{{ form.request.user.email.errors|striptags }}</p>
+            {% endif %}
+            {{ form.request.user.email }}
+        </div>
+
+        <div class="generic-div">
+             {{ form.first_name.label_tag }}
+            {% if form.first_name.errors %}
+                <p class="error-field">{{ form.first_name.errors|striptags }}</p>
+            {% endif %}
+            {{ form.first_name }}
+        </div>
+
+        <div class="generic-div">
+             {{ form.last_name.label_tag }}
+            {% if form.last_name.errors %}
+                <p class="error-field">{{ form.last_name.errors|striptags }}</p>
+            {% endif %}
+            {{ form.last_name }}
+        </div>
+
+        <div class="generic-div">
+             {{ form.bio_info.label_tag }}
+            {% if form.bio_info.errors %}
+                <p class="error-field">{{ form.bio_info.errors|striptags }}</p>
+            {% endif %}
+            {{ form.bio_info }}
+        </div>
+
+        <button>Submit</button>
+
+    </form>
+
+{% endblock %}

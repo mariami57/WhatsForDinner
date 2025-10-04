@@ -1,11 +1,12 @@
 from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.views.generic import CreateView, UpdateView, DetailView
 
-from accounts.forms import WebUserCreationForm
+from accounts.forms import WebUserCreationForm, ProfileEditForm
 from accounts.models import Profile
+from common.mixins import UserIsOwnerMixin
 
 UserModel = get_user_model()
 # Create your views here.
@@ -25,4 +26,12 @@ class ProfileDetails(LoginRequiredMixin, DetailView):
     template_name = 'accounts/profile-details.html'
 
 
+class ProfileUpdateView(LoginRequiredMixin, UserIsOwnerMixin, UpdateView):
+    model = Profile
+    form_class = ProfileEditForm
+    template_name = 'accounts/profile-edit.html'
+
+
+    def get_success_url(self):
+        return reverse('profile-details', kwargs={'pk':self.object.user.pk})
 
