@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-    <div class="recipe-form">
+    <div class="recipe-container profile-details">
         {% if request.user.profile.profile_picture  %}
             <div class="profile-pic">
                 <img src="{{ request.user.profile.profile_picture.url }}" alt="profile-pic">
@@ -11,14 +11,18 @@
         <div class="profile-info">
             <h3>{{ request.user.username }}</h3>
             <h3>{{ request.user.email }}</h3>
-            <p>{{ request.user.profile.full_name }}</p>
-            <p>{{ request.user.profile.bio_info }}</p>
+            {% if request.user.profile.full_name %}
+                <p><b>Full name:</b> {{ request.user.profile.full_name }}</p>
+            {% endif %}
+            {% if request.user.profile.bio_info  %}
+                <p><b>About me:</b><i> {{ request.user.profile.bio_info }}</i></p>
+            {% endif %}
         </div>
 
         <div class="buttons">
             {% if request.user.pk == user.profile.pk %}
                 <a href="{% url 'profile-edit' pk=request.user.pk %}"><i class="fa-solid fa-pencil"></i></a>
-                <a href="{% url 'delete' pk=request.user.pk %}?next={% url 'all-recipes' %}"><i class="fa-solid fa-trash"></i></a>
+                <a href="{% url 'profile-delete' pk=request.user.pk %}"><i class="fa-solid fa-trash"></i></a>
             {% endif %}
         </div>
 

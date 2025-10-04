@@ -7,16 +7,6 @@
         {% csrf_token %}
         {{ form.non_field_errors }}
         <h1>Edit Profile</h1>
-
-         <div class="image-div">
-            {{ form.image.label_tag }}
-            {% if form.profile_picture.errors %}
-                <p class="error-field">{{ form.profile_picture.errors|striptags }}</p>
-            {% endif %}
-            {{ form.image }}
-         </div>
-
-
         <div class="generic-div">
             {{ form.request.user.username.label_tag }}
             {% if form.request.user.username.errors %}
@@ -56,6 +46,14 @@
             {% endif %}
             {{ form.bio_info }}
         </div>
+
+        <div class="image-div">
+            {{ form.image.label_tag }}
+            {% if form.profile_picture.errors %}
+                <p class="error-field">{{ form.profile_picture.errors|striptags }}</p>
+            {% endif %}
+            {{ form.profile_picture }}
+         </div>
 
         <button>Submit</button>
 

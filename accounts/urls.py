@@ -1,6 +1,7 @@
 from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import path, include
 
+from accounts import views
 from accounts.views import RegisterView, ProfileDetails, ProfileUpdateView
 
 urlpatterns =[
@@ -11,5 +12,6 @@ urlpatterns =[
     path('<int:pk>/', include([
         path('details/', ProfileDetails.as_view(), name='profile-details'),
         path('edit/', ProfileUpdateView.as_view(), name='profile-edit'),
+        path('delete/', views.delete_profile, name='profile-delete')
     ]))
 ]
