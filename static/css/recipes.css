@@ -80,7 +80,7 @@
 }
 
 
-.recipe-container .buttons a, .recipe-container .favourite {
+.recipe-container .buttons a, .recipe-container .favourite, .recipe-container .buttons .del-button {
     background: none;
     border:none;
     cursor: pointer;
@@ -88,6 +88,6 @@
 
 }
 
-.recipe-container .buttons a:hover, .recipe-container .favourite:hover{
+.recipe-container .buttons a:hover, .recipe-container .favourite:hover, .recipe-container .buttons .del-button:hover {
     color: rgb(194, 197, 127);
 }

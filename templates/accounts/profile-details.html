@@ -22,7 +22,11 @@
         <div class="buttons">
             {% if request.user.pk == user.profile.pk %}
                 <a href="{% url 'profile-edit' pk=request.user.pk %}"><i class="fa-solid fa-pencil"></i></a>
-                <a href="{% url 'profile-delete' pk=request.user.pk %}"><i class="fa-solid fa-trash"></i></a>
+                <form method="POST" action="{% url 'profile-delete' pk=request.user.pk %}">
+                    {% csrf_token %}
+                    <button type="submit" class="del-button"><i class="fa-solid fa-trash"></i></button>
+                </form>
+
             {% endif %}
         </div>
 

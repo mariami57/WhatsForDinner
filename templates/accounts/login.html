@@ -12,13 +12,11 @@
         {% endif %}
         <form method="POST" class="recipe-form">
             {% csrf_token %}
+            <p class="error-field">{{ form.non_field_errors|striptags }}</p>
             <h1>Log In</h1>
-
-
-
             <div class="generic-div">
                 {{ form.username.label_tag }}
-                {% if  form.username.errors%}
+                {% if form.username.errors %}
                     <p class="error-field">{{ form.username.errors|striptags }}</p>
                 {% endif %}
                 {{ form.username }}

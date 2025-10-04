@@ -5,7 +5,7 @@
 
     <form method="POST" enctype="multipart/form-data" class="recipe-form">
         {% csrf_token %}
-        {{ form.non_field_errors }}
+        <p class="error-field">{{ form.non_field_errors|striptags }}</p>
         <h1>Edit Profile</h1>
         <div class="generic-div">
             {{ form.request.user.username.label_tag }}
