@@ -15,7 +15,10 @@
                 <a href="{%  url 'home' %}">Home</a>
             </li>
 
-
+            <div class="search-bar">
+                <input type="text" id="search-input"/>
+                <ul id="search-results" class="search-results"></ul>
+            </div>
 
             {% if request.user.is_authenticated %}
                 <li class="dropdown {% if request.resolver_match.url_name in 'all-recipes my-recipes favourite-recipes' %}open{% endif %}">
@@ -57,3 +60,51 @@
 <form style="display:none" id="logout-form" action="{% url 'logout' %}" method="POST">
     {% csrf_token %}
 </form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        const input = document.getElementById('search-input');
+        const resultsBox = document.getElementById('search-results');
+
+        document.addEventListener("click", function (e) {
+            if (resultsBox && !resultsBox.contains(e.target)){
+                resultsBox.style.display = 'none';
+            }
+        });
+        input.addEventListener('input', function(){
+            const query = this.value.trim();
+
+            if (query.length < 2) {
+                resultsBox.innerHTML = '';
+                resultsBox.style.display = 'none';
+                return;
+            }
+
+            fetch(`/api/search/?q=${encodeURIComponent(query)}`)
+                .then(response => response.json())
+                .then(data => {
+                    resultsBox.innerHTML = '';
+
+                    if (data.length === 0) {
+                        resultsBox.style.display = 'none';
+
+                        return;
+                    }
+                    resultsBox.style.display = 'block';
+
+                    data.forEach(item => {
+                        const link = document.createElement('a');
+                        link.href = item.url;
+                        link.textCntent=
+                        link.style.display ='block';
+                        resultsBox.appendChild(link);
+                    });
+                })
+                .catch(error => {
+                    console.error('Search error:', error);
+                    resultsBox.style.display = 'none';
+                });
+
+        });
+    });
+</script>
