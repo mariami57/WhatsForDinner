@@ -5,7 +5,7 @@ from django.http import HttpResponseForbidden, JsonResponse
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views.decorators.http import require_POST
-from django.views.generic import CreateView, ListView, UpdateView
+from django.views.generic import CreateView, ListView, UpdateView, DetailView
 
 from common.mixins import UserIsOwnerMixin
 from recipes.forms import RecipeCreateForm, RecipeUpdateForm
@@ -34,6 +34,15 @@ class RecipeEditView(LoginRequiredMixin, UserIsOwnerMixin, UpdateView):
     form_class = RecipeUpdateForm
     template_name = 'recipes/update-recipe.html'
     success_url = reverse_lazy('all-recipes')
+
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs['instance'] = self.get_object()
+        return kwargs
+
+class RecipeDetailsView(DetailView):
+    model = Recipe
+    template_name = 'recipes/recipe-details.html'
 
     def get_form_kwargs(self):
         kwargs = super().get_form_kwargs()

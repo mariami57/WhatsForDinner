@@ -1,0 +1,90 @@
+{%  extends 'common/base.html' %}
+{% load static %}
+
+{% block content %}
+
+        <div class="recipe-container">
+             <div class="recipe-img">
+                {% if recipe.image %}
+                    <img src="{{ recipe.image.url }}" alt="recipe-image">
+                {% endif %}
+            </div>
+            <div class="recipe-info">
+                 <h1>{{ recipe.title }}</h1>
+                <div class="recipe-details">
+                    <p><b>Prep Time: </b>{{ recipe.prep_time }}</p>
+                    <p><b>Cooking Time: </b>{{ recipe.cook_time }}</p>
+                    <p><b>Total Time: </b>{{ recipe.total_time }}</p>
+                    <p><b>Servings: </b>{{ recipe.servings }}</p>
+                </div>
+
+
+                <h2>Instructions:</h2>
+                <p>{{ recipe.instructions }}</p>
+
+                <h2>Ingredients:</h2>
+                <ul>
+                  {% for ingredient in recipe.ingredients.splitlines %}
+                    {% if ingredient %}
+                      <li>{{ ingredient }}</li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+            </div>
+
+
+                <div class="buttons">
+                    {% if request.user.pk == recipe.user.pk %}
+                        <a href="{% url 'update' pk=recipe.pk %}"><i class="fa-solid fa-pencil"></i></a>
+                        <a href="{% url 'delete' pk=recipe.pk %}?next={% url 'all-recipes' %}"><i class="fa-solid fa-trash"></i></a>
+                    {% endif %}
+                </div>
+                {%  if request.user.is_authenticated %}
+                    <div class="favourite">
+                        <div class="favourite-btn" data-recipe-id="{{ recipe.id }}">
+                            {% if request.user in recipe.favourited_by.all %}
+                                <i class="fa-solid fa-heart"></i>
+                            {% else %}
+                                <i class="fa-regular fa-heart"></i>
+                            {% endif %}
+                        </div>
+                {% endif %}
+
+                </div>
+
+
+
+        </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll(".favourite-btn").forEach(btn => {
+        btn.addEventListener("click", function() {
+            const recipeId = this.dataset.recipeId;
+            const icon = this.querySelector("i");
+
+            fetch(`/recipes/${recipeId}/toggle-favourite/`, {
+                method: "POST",
+                headers: {
+                    "X-CSRFToken": "{{ csrf_token }}",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({})
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.favourited) {
+                    icon.classList.remove("fa-regular");
+                    icon.classList.add("fa-solid");
+                } else {
+                    icon.classList.remove("fa-solid");
+                    icon.classList.add("fa-regular");
+                }
+            });
+        });
+    });
+});
+</script>
+
+
+{% endblock %}

@@ -11,14 +11,14 @@
 
     <nav>
         <ul>
-            <li>
-                <a href="{%  url 'home' %}">Home</a>
-            </li>
 
             <div class="search-bar">
                 <input type="text" id="search-input"/>
                 <ul id="search-results" class="search-results"></ul>
             </div>
+            <li>
+                <a href="{%  url 'home' %}">Home</a>
+            </li>
 
             {% if request.user.is_authenticated %}
                 <li class="dropdown {% if request.resolver_match.url_name in 'all-recipes my-recipes favourite-recipes' %}open{% endif %}">
