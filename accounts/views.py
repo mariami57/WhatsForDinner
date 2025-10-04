@@ -23,4 +23,5 @@ class RegisterView(CreateView):
 
 class ProfileDetails(DetailView):
     model = UserModel
+    template_name = 'accounts/profile-details.html'
 
