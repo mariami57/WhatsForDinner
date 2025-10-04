@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8b7d703-4829-4b30-a099-4fb827c3ed1c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/accounts/profile-details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/common/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile/profile-details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/profile-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/profile-details.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +65,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\minni\Documents\GitHub\WhatsForDinner\templates\accounts" />
       <recent name="C:\Users\minni\Documents\GitHub\WhatsForDinner\static\recipes" />
       <recent name="C:\Users\minni\Documents\GitHub\WhatsForDinner\common" />
     </key>
@@ -122,7 +121,7 @@
       <workItem from="1759334853817" duration="8497000" />
       <workItem from="1759397198798" duration="3494000" />
       <workItem from="1759482538241" duration="11559000" />
-      <workItem from="1759578771681" duration="1027000" />
+      <workItem from="1759578771681" duration="2067000" />
     </task>
     <servers />
   </component>

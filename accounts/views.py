@@ -1,12 +1,11 @@
 from django.contrib import messages
 from django.contrib.auth import get_user_model
-from django.shortcuts import render
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, DetailView
+from django.views.generic import CreateView, UpdateView, DetailView
 
 from accounts.forms import WebUserCreationForm
-
-
+from accounts.models import Profile
 
 UserModel = get_user_model()
 # Create your views here.
@@ -21,7 +20,9 @@ class RegisterView(CreateView):
         messages.success(self.request, 'You have successfully registered! Please log in.')
         return super().form_valid(form)
 
-class ProfileDetails(DetailView):
-    model = UserModel
+class ProfileDetails(LoginRequiredMixin, DetailView):
+    model = Profile
     template_name = 'accounts/profile-details.html'
+
+
 
