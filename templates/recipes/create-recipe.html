@@ -4,7 +4,9 @@
 
     <form method="POST" enctype="multipart/form-data" class="recipe-form">
         {% csrf_token %}
-        <p class="error-field">{{ form.non_field_errors|striptags }}</p>
+        {% if form.non_field_errors %}
+            <p class="error-field">{{ form.non_field_errors|striptags }}</p>
+        {% endif %}
         <h1> Create Recipe</h1>
 
         <div class="generic-div">

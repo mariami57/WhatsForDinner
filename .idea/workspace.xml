@@ -6,12 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="a8b7d703-4829-4b30-a099-4fb827c3ed1c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/recipes.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/recipes.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/recipes/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/recipes/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/accounts/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/profile-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/profile-details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/accounts/profile-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/profile-edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/accounts/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/common/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/contacts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/recipes/create-recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recipes/create-recipe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/recipes/recipe-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recipes/recipe-index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/recipes/update-recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recipes/update-recipe.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +31,8 @@
       <list>
         <option value="Python Script" />
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -126,7 +130,7 @@
       <workItem from="1759397198798" duration="3494000" />
       <workItem from="1759482538241" duration="11559000" />
       <workItem from="1759578771681" duration="3407000" />
-      <workItem from="1759591571552" duration="2724000" />
+      <workItem from="1759591571552" duration="4282000" />
     </task>
     <servers />
   </component>

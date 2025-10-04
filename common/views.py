@@ -11,3 +11,4 @@ class AboutPageView(TemplateView):
 
 class ContactsPageView(TemplateView):
     template_name = 'common/contacts.html'
+

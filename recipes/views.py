@@ -79,3 +79,22 @@ class MyFavouriteRecipesView(LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         return self.request.user.favourite_recipes.all()
+
+
+class RecipeIndexView(ListView):
+    model = Recipe
+    template_name = 'recipes/recipe-index.html'
+    context_object_name = 'recipes'
+
+    def get_queryset(self):
+        queryset = Recipe.objects.all().order_by('title')
+        letter = self.request.GET.get('letter')
+        if letter:
+            queryset = queryset.filter(title__istartswith=letter)
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['letter'] = [chr(i) for i in range(65,91)]
+        context['active_letter'] = self.request.GET.get('letter', '')
+        return context

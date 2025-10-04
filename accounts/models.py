@@ -22,9 +22,9 @@ class WebUser(AbstractBaseUser, PermissionsMixin):
 
 class Profile(models.Model):
     user = models.OneToOneField(WebUser, on_delete=models.CASCADE)
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    bio_info = models.TextField()
+    first_name = models.CharField(max_length=100, blank=True, null=True)
+    last_name = models.CharField(max_length=100, blank=True, null=True)
+    bio_info = models.TextField(blank=True, null=True)
     profile_picture = models.ImageField(blank=True, null=True)
 
     @property

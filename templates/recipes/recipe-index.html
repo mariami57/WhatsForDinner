@@ -1,0 +1,33 @@
+{% extends "common/base.html" %}
+{% block content %}
+
+<h1>Recipe Index</h1>
+
+<div class="alphabet-nav">
+  {% for letter in letters %}
+    {% if letter == active_letter %}
+      <strong>{{ letter }}</strong>
+    {% else %}
+      <a href="?letter={{ letter }}">{{ letter }}</a>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<hr>
+
+<div class="recipe-list">
+  {% if recipes %}
+    {% for recipe in recipes %}
+      <div class="recipe-item">
+        <h3>{{ recipe.title }}</h3>
+        {% if recipe.image %}
+          <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}">
+        {% endif %}
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>No recipes found for {{ active_letter|default:"any letter" }}.</p>
+  {% endif %}
+</div>
+
+{% endblock %}

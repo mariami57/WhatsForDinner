@@ -8,6 +8,9 @@
 
     <form action="https://formspree.io/f/xrbyprow" method="post" class="contact-form">
         {% csrf_token %}
+        {% if form.non_field_errors %}
+             <p class="error-field">{{ form.non_field_errors|striptags }}</p>
+        {% endif %}
         <div class="form-group">
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" required>

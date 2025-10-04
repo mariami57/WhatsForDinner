@@ -4,7 +4,9 @@
 {% block content %}
     <form method="POST" class="recipe-form">
         {% csrf_token %}
-        <p class="error-field">{{ form.non_field_errors|striptags }}</p>
+        {% if form.non_field_errors %}
+             <p class="error-field">{{ form.non_field_errors|striptags }}</p>
+        {% endif %}
         <h1>Register</h1>
         <div class="generic-div">
             {{ form.username.label_tag }}
