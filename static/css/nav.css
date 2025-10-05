@@ -109,7 +109,7 @@ nav ul a {
 }
 
 
-#search-input , #time-input {
+#search-input {
     width: 100%;
     border-radius: 15px;
     height: 30px;
@@ -119,15 +119,8 @@ nav ul a {
 
 }
 
-#time-input {
-    width:80%;
-    border-radius: 15px;
-    height: 30px;
-    line-height: normal;
-    background-color: rgb(253, 249, 245);
-    border: 2px solid rgb(176 55 25);
-}
-.search-results, .search-results2 {
+
+.search-results {
   position: absolute;
   display: none;
   list-style: none;
@@ -142,11 +135,11 @@ nav ul a {
 
 }
 
-.search-results li, .search-results2 li {
+.search-results li {
   padding: 0.5rem;
 }
 
-.search-results li a, .search-results2 li a {
+.search-results li a {
   text-decoration: none;
   color: black;
 }

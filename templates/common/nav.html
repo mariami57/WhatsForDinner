@@ -17,10 +17,6 @@
                     <ul id="search-results" class="search-results"></ul>
 
                 </div>
-                <div class="search-bar2">
-                    <input type="number" id="time-input" placeholder='Cooking time (min)'>
-                    <ul id="search-results2" class="search-results2"></ul>
-                </div>
             </div>
 
             <li>
@@ -114,41 +110,7 @@
 
         });
 
-        const timeInput = document.getElementById('time-input');
-        const resultsBox2 = document.getElementById('search-results2');
 
-        if (timeInput) {
-            timeInput.addEventListener('input', function(){
-                const time = this.value.trim();
-                if (!time) {
-                    resultsBox2.innerHTML = '';
-                    resultsBox2.style.display = 'none';
-                    return;
-                }
 
-                fetch(`/api/time-search/?time=${encodeURIComponent(time)}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        resultsBox2.innerHTML = '';
-                        if (data.length === 0) {
-                            resultsBox2.style.display = 'none';
-                            return;
-                        }
-                        resultsBox2.style.display = 'block';
-
-                        data.forEach(item => {
-                            const link = document.createElement('a');
-                            link.href = item.url;
-                            link.textContent = item.label1 || item.label4 || 'Result';
-                            link.style.display = 'block';
-                            resultsBox2.appendChild(link);
-                        });
-                    })
-                    .catch(error => {
-                        console.error('Time search error:', error);
-                        resultsBox2.style.display = 'none';
-                    });
-            });
-        }
     });
 </script>

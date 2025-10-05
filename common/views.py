@@ -21,14 +21,13 @@ class ContactsPageView(TemplateView):
 class GlobalSearchAPIView(APIView):
     def get(self,request):
         query = request.GET.get('q', '')
-        max_time = request.GET.get('time', '')
 
         results = []
-        filters = Q()
 
         if query:
-            filters |= Q(user__username__icontains=query) | Q(title__icontains=query) | Q(ingredients__icontains=query)
-
+            filters = Q(user__username__icontains=query) | Q(title__icontains=query) | Q(ingredients__icontains=query)
+        else:
+            recipes = Recipe.objects.none()
 
         recipes = Recipe.objects.filter(filters)
         recipe_data = RecipeSerializer(recipes, many=True).data
@@ -39,31 +38,6 @@ class GlobalSearchAPIView(APIView):
                 "label1": item.get("title", ""),
                 "label2": item.get("user", {}).get("username", "") if isinstance(item.get("user"), dict) else "",
                 "label3": item.get("ingredients", ""),
-                "label4": item.get("total_time", ""),
-                "url": f"/recipes/{item.get('pk')}/details"
-            })
-
-        return Response(results)
-
-class TimeSearchAPIView(APIView):
-    def get(self, request):
-        max_time = request.GET.get('time', '')
-
-        results = []
-
-        if max_time.isdigit():
-            recipes = Q(total_time__lte=int(max_time))
-        else:
-            recipes = Recipe.objects.none()
-
-
-        recipe_data = RecipeSerializer(recipes, many=True).data
-
-        for item in recipe_data:
-            results.append({
-                "pk": item.get("pk"),
-                "label1": item.get("title", ""),
-                "label4": item.get("total_time", ""),
                 "url": f"/recipes/{item.get('pk')}/details"
             })
 

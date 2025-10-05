@@ -1,5 +1,5 @@
 from django.urls import path
-from common.views import HomeView, AboutPageView, ContactsPageView, GlobalSearchAPIView, TimeSearchAPIView
+from common.views import HomeView, AboutPageView, ContactsPageView, GlobalSearchAPIView
 
 urlpatterns = [
     path('', HomeView.as_view(), name='home'),
@@ -8,5 +8,4 @@ urlpatterns = [
     path('contacts/', ContactsPageView.as_view(), name='contacts'),
     path('api/search/', GlobalSearchAPIView.as_view(), name='global-search'),
 
-    path('api/time-search/', TimeSearchAPIView.as_view(), name='time-search'),
 ]
