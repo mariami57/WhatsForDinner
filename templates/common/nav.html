@@ -13,8 +13,8 @@
         <ul>
 
             <div class="search-bar">
-                <input type="text" id="search-input"/>
-                <ul id="search-results" class="search-results"></ul>
+                <input type="text" id="search-input" placeholder='Search here'>
+                <input type="number" id="time-input" placeholder='Cooking time (min)'>
             </div>
             <li>
                 <a href="{%  url 'home' %}">Home</a>
@@ -106,5 +106,29 @@
                 });
 
         });
+
+        const timeInput = document.getElementById('time-input');
+        timeInput.addEventListener('input', function(){
+            const time = this.value.trim();
+            if (!time) return;
+
+            fetch(`/api/search/?time=${encodeURIComponent(time)}`)
+                .then(response => response.json())
+                .then(data => {
+                    resultsBox.innerHTML = '';
+                    if (data.length === 0) {
+                        resultsBox.style.display = 'none';
+                        return;
+                    }
+                    resultsBox.style.dispaly ='block';
+                    data.forEach(item => {
+                        const link = document.createElement('a');
+                        link.href = item.url;
+                        link.textContent = item.label4;
+                        link.style.display = 'block';
+                        resultsBox.appendChild(link);
+                    })
+                })
+        })
     });
 </script>

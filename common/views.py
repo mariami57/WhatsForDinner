@@ -21,18 +21,21 @@ class ContactsPageView(TemplateView):
 class GlobalSearchAPIView(APIView):
     def get(self,request):
         query = request.GET.get('q', '')
+        max_time = request.GET.get('time', '')
+
         results = []
+        filters = Q()
 
         if query:
-            filters = (
+            filters |= (
                 Q(user__username__icontains=query) |
                 Q(title__icontains=query) |
                 Q(ingredients__icontains=query)
 
             )
 
-            if query.isdigit():
-                filters |= Q(total_time=int(query))
+            if max_time.isdigit():
+                filters &= Q(total_time__lte=int(max_time))
 
             recipes = Recipe.objects.filter(filters)
             recipe_data = RecipeSerializer(recipes, many=True).data
@@ -41,8 +44,7 @@ class GlobalSearchAPIView(APIView):
                 results.append({
                     "pk": item.get("pk"),
                     "label1": item.get("title", ""),
-                    "label2": item.get("user", {}).get("username", "") if isinstance(item.get("user"),
-                                                                                     dict) else "",
+                    "label2": item.get("user", {}).get("username", "") if isinstance(item.get("user"),                                                                 dict) else "",
                     "label3": item.get("ingredients", ""),
                     "label4": item.get("total_time", ""),
                     "url": f"/recipes/{item.get('pk')}/details"
