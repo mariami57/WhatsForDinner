@@ -115,31 +115,40 @@
         });
 
         const timeInput = document.getElementById('time-input');
-        timeInput.addEventListener('input', function(){
-            const time = this.value.trim();
-            if (!time) return;
+        const resultsBox2 = document.getElementById('search-results2');
 
-            fetch(`/api/search/?time=${encodeURIComponent(time)}`)
-                .then(response => response.json())
-                .then(data => {
-                    resultsBox.innerHTML = '';
-                    if (data.length === 0) {
-                        resultsBox.style.display = 'none';
-                        return;
-                    }
-                    resultsBox.style.display ='block';
-                    data.forEach(item => {
-                        const link = document.createElement('a');
-                        link.href = item.url;
-                        link.textContent = item.label4;
-                        link.style.display = 'block';
-                        resultsBox.appendChild(link);
+        if (timeInput) {
+            timeInput.addEventListener('input', function(){
+                const time = this.value.trim();
+                if (!time) {
+                    resultsBox2.innerHTML = '';
+                    resultsBox2.style.display = 'none';
+                    return;
+                }
+
+                fetch(`/api/time-search/?time=${encodeURIComponent(time)}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        resultsBox2.innerHTML = '';
+                        if (data.length === 0) {
+                            resultsBox2.style.display = 'none';
+                            return;
+                        }
+                        resultsBox2.style.display = 'block';
+
+                        data.forEach(item => {
+                            const link = document.createElement('a');
+                            link.href = item.url;
+                            link.textContent = item.label1 || item.label4 || 'Result';
+                            link.style.display = 'block';
+                            resultsBox2.appendChild(link);
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Time search error:', error);
+                        resultsBox2.style.display = 'none';
                     });
-                })
-                .catch(error => {
-                    console.error('Time search error:', error);
-                    resultsBox.style.display = 'none';
-                });
-        })
+            });
+        }
     });
 </script>

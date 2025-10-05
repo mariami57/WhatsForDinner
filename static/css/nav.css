@@ -142,11 +142,11 @@ nav ul a {
 
 }
 
-.search-results li {
+.search-results li, .search-results2 li {
   padding: 0.5rem;
 }
 
-.search-results li a {
+.search-results li a, .search-results2 li a {
   text-decoration: none;
   color: black;
 }
