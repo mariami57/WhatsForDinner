@@ -36,12 +36,16 @@ class GlobalSearchAPIView(APIView):
 
             recipes = Recipe.objects.filter(filters)
             recipe_data = RecipeSerializer(recipes, many=True).data
-            for item in recipe_data:
 
-                item['label1'] = item.get('title', '')
-                item['label2'] = item['user']['username']
-                item['label3'] = item.get('ingredients','')
-                item['label4'] = item.get('total_time','')
-            results.extend(recipe_data)
+            for item in recipe_data:
+                results.append({
+                    "pk": item.get("pk"),
+                    "label1": item.get("title", ""),
+                    "label2": item.get("user", {}).get("username", "") if isinstance(item.get("user"),
+                                                                                     dict) else "",
+                    "label3": item.get("ingredients", ""),
+                    "label4": item.get("total_time", ""),
+                    "url": f"/recipes/{item.get('pk')}/details"
+                })
 
         return Response(results)

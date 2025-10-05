@@ -57,7 +57,7 @@ def delete_recipe(request, pk):
         next_url = request.POST.get('next') or request.GET.get('next')
         if next_url:
             return redirect(next_url)
-        return redirect('home')
+        return redirect('all-recipes')
     else:
         return HttpResponseForbidden('You are not allowed to delete this recipe')
 
