@@ -94,8 +94,8 @@
 
                     data.forEach(item => {
                         const link = document.createElement('a');
-                        link.href = item.url;
-                        link.textCntent=
+                        link.href = `/recipes/${item.id}/`;
+                        link.textContent= item.label1 || item.label2 || item.label3 || item.label4 || 'Result'
                         link.style.display ='block';
                         resultsBox.appendChild(link);
                     });

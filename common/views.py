@@ -24,19 +24,24 @@ class GlobalSearchAPIView(APIView):
         results = []
 
         if query:
-            recipes = Recipe.objects.filter(
+            filters = (
                 Q(user__username__icontains=query) |
                 Q(title__icontains=query) |
-                Q(ingredients__icontains=query) |
-                Q(total_time__icontains=query)
+                Q(ingredients__icontains=query)
+
             )
 
+            if query.isdigit():
+                filters |= Q(total_time=int(query))
+
+            recipes = Recipe.objects.filter(filters)
             recipe_data = RecipeSerializer(recipes, many=True).data
             for item in recipe_data:
-                item['label1'] = item['title']
-                item['label2'] = item['username']
-                item['label3'] = item['ingredients']
-                item['label4'] = item['total_time']
+
+                item['label1'] = item.get('title', '')
+                item['label2'] = item['user']['username']
+                item['label3'] = item.get('ingredients','')
+                item['label4'] = item.get('total_time','')
             results.extend(recipe_data)
 
         return Response(results)
