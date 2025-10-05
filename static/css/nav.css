@@ -97,19 +97,20 @@ nav ul a {
   opacity: 1;
 }
 
-.search-bar{
+.search-bars {
     position: absolute;
+    display:flex;
+    gap:10px;
     left: 48%;
-    transform: translateX(-50%);
     top: 18%;
+    transform: translateX(-50%);
     transform: translate(-50%, -50%);
     z-index: 11000;
-    display: flex;
-    gap:10px;
 }
 
+
 #search-input , #time-input {
-    width: 60%;
+    width: 100%;
     border-radius: 15px;
     height: 30px;
     line-height: normal;
@@ -119,9 +120,14 @@ nav ul a {
 }
 
 #time-input {
-    width:40%;
+    width:80%;
+    border-radius: 15px;
+    height: 30px;
+    line-height: normal;
+    background-color: rgb(253, 249, 245);
+    border: 2px solid rgb(176 55 25);
 }
-.search-results {
+.search-results, .search-results2 {
   position: absolute;
   display: none;
   list-style: none;

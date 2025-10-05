@@ -11,11 +11,18 @@
 
     <nav>
         <ul>
+            <div class="search-bars">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder='Search here'>
+                    <ul id="search-results" class="search-results"></ul>
 
-            <div class="search-bar">
-                <input type="text" id="search-input" placeholder='Search here'>
-                <input type="number" id="time-input" placeholder='Cooking time (min)'>
+                </div>
+                <div class="search-bar2">
+                    <input type="number" id="time-input" placeholder='Cooking time (min)'>
+                    <ul id="search-results2" class="search-results2"></ul>
+                </div>
             </div>
+
             <li>
                 <a href="{%  url 'home' %}">Home</a>
             </li>
@@ -120,15 +127,19 @@
                         resultsBox.style.display = 'none';
                         return;
                     }
-                    resultsBox.style.dispaly ='block';
+                    resultsBox.style.display ='block';
                     data.forEach(item => {
                         const link = document.createElement('a');
                         link.href = item.url;
                         link.textContent = item.label4;
                         link.style.display = 'block';
                         resultsBox.appendChild(link);
-                    })
+                    });
                 })
+                .catch(error => {
+                    console.error('Time search error:', error);
+                    resultsBox.style.display = 'none';
+                });
         })
     });
 </script>
