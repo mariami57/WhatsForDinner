@@ -31,9 +31,15 @@ class SearchAPITests(APITestCase):
 
         )
 
-    def test_global_search_by_title(self):
+    def test_global_search_by_title_returns_true(self):
         url= reverse('global-search')
         response = self.client.get(url, {'q':'Spaghetti'})
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertTrue(any('Spaghetti' in r['label1'] for r in response.data))
+
+    def test_global_search_by_ingredient(self):
+        url = reverse('global-search')
+        response = self.client.get(url, {'q': 'tomato'})
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertTrue(any('tomato' in r['label3'] for r in response.data))
 
