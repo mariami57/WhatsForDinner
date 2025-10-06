@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a8b7d703-4829-4b30-a099-4fb827c3ed1c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tests/test_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/tests/test_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipes/tests/test_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/recipes/tests/test_models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subscriber/tests/test_newsletter.py" beforeDir="false" afterPath="$PROJECT_DIR$/subscriber/tests/test_newsletter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +44,7 @@
     "Django tests.Test: common.tests.test_api.SearchAPITests.test_global_search_by_title.executor": "Run",
     "Django tests.Test: recipes.tests.test_models.RecipeModelTests.test_string_representation_returns_true.executor": "Run",
     "Django tests.Test: recipes.tests.test_models.RecipeModelTests.test_total_time_field_returns_total_time.executor": "Run",
+    "Django tests.Test: subscriber.tests.test_newsletter.NewsletterFromTests.test_newsletter_signup_view_renders_success.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -75,7 +75,7 @@
       <recent name="C:\Users\minni\Documents\GitHub\WhatsForDinner\static\recipes" />
     </key>
   </component>
-  <component name="RunManager" selected="Django tests.Test: recipes.tests.test_models.RecipeModelTests.test_string_representation_returns_true">
+  <component name="RunManager" selected="Django tests.Test: subscriber.tests.test_newsletter.NewsletterFromTests.test_newsletter_signup_view_renders_success">
     <configuration name="Test: common.tests.test_api.SearchAPITests.test_global_search_by_ingredient" type="DjangoTestsConfigurationType" temporary="true">
       <module name="WhatsForDinner" />
       <option name="ENV_FILES" value="" />
@@ -160,6 +160,27 @@
       <option name="OPTIONS" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Test: subscriber.tests.test_newsletter.NewsletterFromTests.test_newsletter_signup_view_renders_success" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="WhatsForDinner" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="subscriber.tests.test_newsletter.NewsletterFromTests.test_newsletter_signup_view_renders_success" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="WhatsForDinner" type="Python.DjangoServer" factoryName="Django server">
       <module name="WhatsForDinner" />
       <option name="ENV_FILES" value="" />
@@ -186,6 +207,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Django tests.Test: subscriber.tests.test_newsletter.NewsletterFromTests.test_newsletter_signup_view_renders_success" />
         <item itemvalue="Django tests.Test: recipes.tests.test_models.RecipeModelTests.test_string_representation_returns_true" />
         <item itemvalue="Django tests.Test: recipes.tests.test_models.RecipeModelTests.test_total_time_field_returns_total_time" />
         <item itemvalue="Django tests.Test: common.tests.test_api.SearchAPITests.test_global_search_by_ingredient" />
@@ -221,7 +243,7 @@
       <workItem from="1759578771681" duration="3407000" />
       <workItem from="1759591571552" duration="8676000" />
       <workItem from="1759675797214" duration="7793000" />
-      <workItem from="1759743248436" duration="10533000" />
+      <workItem from="1759743248436" duration="11652000" />
     </task>
     <servers />
   </component>
@@ -233,5 +255,6 @@
     <SUITE FILE_PATH="coverage/WhatsForDinner$Test__recipes_tests_test_models_RecipeModelTests_test_total_time_field_returns_total_time.coverage" NAME="Test: recipes.tests.test_models.RecipeModelTests.test_total_time_field_returns_total_time Coverage Results" MODIFIED="1759769313070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/WhatsForDinner$Test__recipes_tests_test_models_RecipeModelTests_test_string_representation_returns_true.coverage" NAME="Test: recipes.tests.test_models.RecipeModelTests.test_string_representation_returns_true Coverage Results" MODIFIED="1759769458994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/WhatsForDinner$Test__common_tests_test_api_SearchAPITests_test_global_search_by_ingredient.coverage" NAME="Test: common.tests.test_api.SearchAPITests.test_global_search_by_ingredient Coverage Results" MODIFIED="1759768572067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/WhatsForDinner$Test__subscriber_tests_test_newsletter_NewsletterFromTests_test_newsletter_signup_view_renders_success.coverage" NAME="Test: subscriber.tests.test_newsletter.NewsletterFromTests.test_newsletter_signup_view_renders_success Coverage Results" MODIFIED="1759770632469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
