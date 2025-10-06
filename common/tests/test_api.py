@@ -13,7 +13,7 @@ class SearchAPITests(APITestCase):
         self.recipe1 = Recipe.objects.create(
             user=self.user,
             title='Spaghetti Bolognese',
-            instructions = "Fry the beef and boil the pasta",
+            instructions = 'Fry the beef and boil the pasta',
             ingredients='beef, tomato, pasta',
             prep_time=10,
             cook_time=30,
@@ -24,7 +24,7 @@ class SearchAPITests(APITestCase):
             user=self.user,
             title='Quick Salad',
             ingredients='lettuce, tomato, cucumber',
-            instructions="Cut the veggies",
+            instructions='Cut the veggies',
             prep_time=10,
             cook_time=0,
             servings=2,
