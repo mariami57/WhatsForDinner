@@ -154,3 +154,11 @@ AUTH_USER_MODEL = 'accounts.WebUser'
 
 LOGIN_REDIRECT_URL = reverse_lazy('home')
 LOGOUT_REDIRECT_URL = reverse_lazy('home')
+
+EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST=config('EMAIL_HOST')
+EMAIL_PORT=config('EMAIL_PORT', cast=int)
+EMAIL_USE_TLS=config('EMAIL_USE_TLS', cast=bool)
+EMAIL_HOST_USER=config('EMAIL_API_KEY')
+EMAIL_HOST_PASSWORD=config('EMAIL_API_SECRET')
+COMPANY_EMAIL=config('COMPANY_EMAIL')
