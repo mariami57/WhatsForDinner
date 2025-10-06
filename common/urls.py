@@ -1,11 +1,13 @@
 from django.urls import path
-from common.views import HomeView, AboutPageView, ContactsPageView, GlobalSearchAPIView
+from common.views import HomeView, AboutPageView, ContactsPageView, GlobalSearchAPIView, NewsletterSignUpView
 
 urlpatterns = [
     path('', HomeView.as_view(), name='home'),
     path('about/', AboutPageView.as_view(), name='about'),
 
     path('contacts/', ContactsPageView.as_view(), name='contacts'),
+
+    path('newsletter/', NewsletterSignUpView.as_view(), name='newsletter'),
     path('api/search/', GlobalSearchAPIView.as_view(), name='global-search'),
 
 ]

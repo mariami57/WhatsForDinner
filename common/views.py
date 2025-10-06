@@ -18,6 +18,9 @@ class AboutPageView(TemplateView):
 class ContactsPageView(TemplateView):
     template_name = 'common/contacts.html'
 
+class NewsletterSignUpView(TemplateView):
+    template_name = 'common/newsletter-sign-up.html'
+
 class GlobalSearchAPIView(APIView):
     def get(self,request):
         query = request.GET.get('q', '')
