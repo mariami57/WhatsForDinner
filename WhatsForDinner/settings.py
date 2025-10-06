@@ -44,6 +44,7 @@ PROJECT_APPS = [
     'recipes',
     'common',
     'accounts',
+    'subscriber',
 ]
 
 INSTALLED_APPS = [

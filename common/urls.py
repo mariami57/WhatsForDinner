@@ -6,8 +6,6 @@ urlpatterns = [
     path('about/', AboutPageView.as_view(), name='about'),
 
     path('contacts/', ContactsPageView.as_view(), name='contacts'),
-
-    path('newsletter/', NewsletterSignUpView.as_view(), name='newsletter'),
     path('api/search/', GlobalSearchAPIView.as_view(), name='global-search'),
 
 ]
