@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8b7d703-4829-4b30-a099-4fb827c3ed1c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b980b3ac-76f6-4616-a797-383c4f778a31.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b980b3ac-76f6-4616-a797-383c4f778a31.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b980b3ac-76f6-4616-a797-383c4f778a31/storage_v2/_src_/database/dinner3.AaJdYw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b980b3ac-76f6-4616-a797-383c4f778a31/storage_v2/_src_/database/dinner3.AaJdYw/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subscriber/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/subscriber/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subscriber/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/subscriber/signals.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,40 +38,62 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.customizations&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django tests.Test: common.tests.test_api.SearchAPITests.test_global_search_by_title.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "main",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.customizations",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\minni\Documents\GitHub\WhatsForDinner\common\tests" />
       <recent name="C:\Users\minni\Documents\GitHub\WhatsForDinner\templates\subscriber" />
       <recent name="C:\Users\minni\Documents\GitHub\WhatsForDinner\subscriber" />
       <recent name="C:\Users\minni\Documents\GitHub\WhatsForDinner\templates\accounts" />
       <recent name="C:\Users\minni\Documents\GitHub\WhatsForDinner\static\recipes" />
-      <recent name="C:\Users\minni\Documents\GitHub\WhatsForDinner\common" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django tests.Test: common.tests.test_api.SearchAPITests.test_global_search_by_title">
+    <configuration name="Test: common.tests.test_api.SearchAPITests.test_global_search_by_title" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="WhatsForDinner" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="common.tests.test_api.SearchAPITests.test_global_search_by_title" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="WhatsForDinner" type="Python.DjangoServer" factoryName="Django server">
       <module name="WhatsForDinner" />
       <option name="ENV_FILES" value="" />
@@ -96,6 +118,11 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Django tests.Test: common.tests.test_api.SearchAPITests.test_global_search_by_title" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -125,11 +152,14 @@
       <workItem from="1759578771681" duration="3407000" />
       <workItem from="1759591571552" duration="8676000" />
       <workItem from="1759675797214" duration="7793000" />
-      <workItem from="1759743248436" duration="6170000" />
+      <workItem from="1759743248436" duration="8740000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/WhatsForDinner$Test__common_tests_test_api_SearchAPITests_test_global_search_by_title.coverage" NAME="Test: common.tests.test_api.SearchAPITests.test_global_search_by_title Coverage Results" MODIFIED="1759767740055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
