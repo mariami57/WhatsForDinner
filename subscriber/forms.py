@@ -7,3 +7,7 @@ class SubscriberBaseForm(forms.ModelForm):
     class Meta:
         model = Subscriber
         exclude = ('date_subscribed',)
+
+
+class SubscriberCreateForm(SubscriberBaseForm):
+    pass

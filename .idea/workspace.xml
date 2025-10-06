@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a8b7d703-4829-4b30-a099-4fb827c3ed1c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatsForDinner/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsForDinner/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatsForDinner/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsForDinner/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/common/newsletter-sign-up.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/subscriber/newsletter-sign-up.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subscriber/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/subscriber/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subscriber/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/subscriber/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +127,7 @@
       <workItem from="1759578771681" duration="3407000" />
       <workItem from="1759591571552" duration="8676000" />
       <workItem from="1759675797214" duration="7793000" />
-      <workItem from="1759743248436" duration="3213000" />
+      <workItem from="1759743248436" duration="4154000" />
     </task>
     <servers />
   </component>
