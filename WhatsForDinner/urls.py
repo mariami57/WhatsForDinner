@@ -17,20 +17,23 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.http import HttpResponse
 from django.urls import path, include, re_path
-from django.views.static import serve
 
+
+MAILJET_VERIFICATION_FILENAME = 'e2988da24db20aee7b06774e8d791edd.txt'
+
+def mailjet_verification(request, filename):
+    if filename == MAILJET_VERIFICATION_FILENAME:
+        return HttpResponse("", content_type="text/plain")
+    return HttpResponse(status=404)
 urlpatterns = [
-
+    re_path(rf'^{MAILJET_VERIFICATION_FILENAME}$', mailjet_verification),
     path('', include('common.urls')),
     path('admin/', admin.site.urls),
     path('recipes/', include('recipes.urls')),
     path('accounts/', include('accounts.urls')),
     path('subscriber/', include('subscriber.urls')),
-
-    re_path(r'^mailjet-(?P<filename>.*)\.html$', serve, {
-        'document_root': settings.BASE_DIR / 'static/verification',
-    }),
 
 ]
 
