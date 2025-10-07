@@ -21,14 +21,8 @@ from django.http import HttpResponse
 from django.urls import path, include, re_path
 
 
-MAILJET_VERIFICATION_FILENAME = 'e2988da24db20aee7b06774e8d791edd.txt'
-
-def mailjet_verification(request, filename):
-    if filename == MAILJET_VERIFICATION_FILENAME:
-        return HttpResponse("", content_type="text/plain")
-    return HttpResponse(status=404)
 urlpatterns = [
-    re_path(r'^(?P<filename>[\w\d]+\.txt)$', mailjet_verification),
+
     path('', include('common.urls')),
     path('admin/', admin.site.urls),
     path('recipes/', include('recipes.urls')),

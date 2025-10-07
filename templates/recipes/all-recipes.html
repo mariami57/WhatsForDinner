@@ -4,12 +4,10 @@
 {% block content %}
 
  {% if messages %}
-       {% for message in messages %}
            <p class="error-field">
             {{ message }}
            </p>
-       {% endfor %}
-    {% endif %}
+ {% endif %}
 
     {% for recipe in recipe_list %}
         <div class="recipe-container">
