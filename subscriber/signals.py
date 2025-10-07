@@ -20,7 +20,7 @@ def send_welcome_email(sender, instance, created, **kwargs):
         send_mail(
             subject,
             message,
-            settings.DEFAULT_FROM_EMAIL,
-            [instance.email],
+            from_email=settings.COMPANY_EMAIL,
+            recipient_list=[instance.email],
             fail_silently=False,
         )
