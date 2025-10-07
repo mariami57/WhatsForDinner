@@ -28,7 +28,7 @@ def mailjet_verification(request, filename):
         return HttpResponse("", content_type="text/plain")
     return HttpResponse(status=404)
 urlpatterns = [
-    re_path(rf'^{MAILJET_VERIFICATION_FILENAME}$', mailjet_verification),
+    re_path(r'^(?P<filename>[\w\d]+\.txt)$', mailjet_verification),
     path('', include('common.urls')),
     path('admin/', admin.site.urls),
     path('recipes/', include('recipes.urls')),
