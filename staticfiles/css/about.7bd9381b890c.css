@@ -1,0 +1,53 @@
+.carousel.infinite {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 12px;
+
+}
+
+.carousel-track {
+    display:flex;
+    width: max-content;
+    animation: scroll-left 20s linear infinite;
+}
+
+.carousel-slide {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.carousel-slide img {
+    width: 300px;
+    height: 400px;
+    display:block;
+    border-radius:12px;
+    flex-shrink: 0;
+}
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.about-us p {
+    text-align: center;
+    padding: 30px;
+    max-width:1000px;
+    margin: 0 auto;
+    font-weight:700;
+}
+
+@media (max-width: 768px) {
+    .carousel-slide img {
+        width: 200px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .carousel-slide img {
+        width: 150px;
+    }
+}

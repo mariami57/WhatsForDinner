@@ -1,0 +1,9 @@
+.hyperlink {
+    font-weight:700;
+}
+
+.hyperlink:hover {
+    color: rgb(194, 197, 127);
+
+}
+

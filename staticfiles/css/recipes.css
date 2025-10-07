@@ -1,0 +1,125 @@
+.recipe-container {
+    width:80%;
+    display:flex;
+    margin: 20px auto;
+    align-items: center;
+    gap:50px;
+    background: #fefae9;
+    border-radius:12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: relative;
+
+
+}
+
+.recipe-img img {
+    width:300px;
+    height:auto;
+}
+
+.times, .recipe-details {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px;
+}
+
+.times .generic-div input{
+    width:90%;
+}
+
+.recipe-info{
+    max-width:80%;
+}
+
+.recipe-details {
+    border-radius: 12px;
+    width:500px;
+    position: relative;
+    padding: 10px 10px;
+
+}
+
+.recipe-details::before {
+    content: "";
+    border-radius: 12px;
+    display: inline-block;
+    position: absolute;
+    top: -.0625rem;
+    left: -.0625rem;
+    width: calc(100% + .125rem);
+    border-top: 12px solid rgb(231, 81, 81);
+    z-index:1000;
+}
+
+.recipe-details::after {
+    content: "";
+    border-radius: 12px;
+    display: inline-block;
+    position: absolute;
+    top: 3.5rem;
+    left: -.0625rem;
+    width: calc(100% + .125rem);
+    border-top: 12px solid rgb(231, 81, 81);
+    z-index:1000;
+}
+
+.recipe-container .buttons {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    display: flex;
+    gap: 10px;
+}
+
+.recipe-container .favourite {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+
+.recipe-container .buttons a, .recipe-container .favourite, .recipe-container .buttons .del-button {
+    background: none;
+    border:none;
+    cursor: pointer;
+    color: rgb(231, 81, 81);
+
+}
+
+.recipe-container .buttons a:hover, .recipe-container .favourite:hover, .recipe-container .buttons .del-button:hover {
+    color: rgb(194, 197, 127);
+}
+
+.alphabet-nav {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.alphabet-nav a {
+  margin: 0 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.alphabet-nav strong {
+  margin: 0 5px;
+  color: red;
+}
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 5px;
+}
+
+.recipe-item {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width:400px;
+}
+.recipe-item img {
+  width:200px;
+  height: 200px;
+  border-radius: 8px;
+}
