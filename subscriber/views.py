@@ -13,6 +13,7 @@ class NewsletterSubscriberView(CreateView):
     form_class = SubscriberCreateForm
     template_name = 'subscriber/newsletter-sign-up.html'
     success_url = reverse_lazy('all-recipes')
+    #Uses signal to make an user a subscriber
 
     def form_valid(self, form):
         messages.success(self.request, 'You have successfully subscribed to our newsletter!')
