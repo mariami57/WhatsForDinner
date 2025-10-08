@@ -137,7 +137,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
@@ -145,17 +145,21 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 
+MEDIA_URL = '/media/'
 
+MEDIA_ROOT = BASE_DIR / 'media'
 
 
 STORAGES = {
     'staticfiles': {
         'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
+        "OPTIONS": {
+            "location": STATIC_ROOT,
+            "base_url": "/static/",
+        },
     },
 }
-MEDIA_URL = 'media/'
 
-MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -167,7 +171,7 @@ AUTH_USER_MODEL = 'accounts.WebUser'
 LOGIN_REDIRECT_URL = reverse_lazy('home')
 LOGOUT_REDIRECT_URL = reverse_lazy('home')
 
-EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST=config('EMAIL_HOST')
 EMAIL_PORT=config('EMAIL_PORT', cast=int)
 EMAIL_USE_TLS=config('EMAIL_USE_TLS', cast=bool)
