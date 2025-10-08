@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8b7d703-4829-4b30-a099-4fb827c3ed1c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatsForDinner/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsForDinner/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subscriber/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/subscriber/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/profile-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/profile-edit.html" afterDir="false" />
-    </list>
+    <list default="true" id="a8b7d703-4829-4b30-a099-4fb827c3ed1c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -248,7 +243,7 @@
       <workItem from="1759675797214" duration="7793000" />
       <workItem from="1759743248436" duration="11803000" />
       <workItem from="1759831474311" duration="11243000" />
-      <workItem from="1759919656934" duration="6071000" />
+      <workItem from="1759919656934" duration="6528000" />
     </task>
     <servers />
   </component>
