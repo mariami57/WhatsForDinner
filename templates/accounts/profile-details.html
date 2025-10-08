@@ -3,9 +3,9 @@
 
 {% block content %}
     <div class="recipe-container profile-details">
-        {% if request.user.profile.profile_picture  %}
+        {% if user.profile.profile_picture  %}
             <div class="profile-pic">
-                <img src="{{ request.user.profile.profile_picture.url }}" alt="profile-pic">
+                <img src="{{ user.profile.profile_picture.url }}" alt="profile-pic">
             </div>
         {% endif %}
         <div class="profile-info">
