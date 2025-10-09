@@ -1,3 +1,4 @@
+from cloudinary.models import CloudinaryField
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.db import models
@@ -8,7 +9,7 @@ UserModel = get_user_model()
 class Recipe(models.Model):
     user = models.ForeignKey(UserModel, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='recipes',  blank=True, null=True)
+    image = CloudinaryField(resource_type='image',  blank=True, null=True)
     instructions = models.TextField(max_length=1000)
     ingredients = models.TextField(max_length=1000)
     prep_time = models.PositiveIntegerField()

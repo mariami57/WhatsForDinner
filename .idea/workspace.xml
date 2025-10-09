@@ -7,9 +7,29 @@
     <list default="true" id="a8b7d703-4829-4b30-a099-4fb827c3ed1c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatsForDinner/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsForDinner/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/staticfiles.json" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/staticfiles.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/profile-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/profile-details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/profile-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/profile-edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatsForDinner/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsForDinner/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/premium_photo-1673967831980-1d377baaded2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/premium_photo-1673967831980-1d377baaded2_3FCBWSJ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/recipes/Nyhavn-Neighborhood-Copenhagen-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/recipes/Nyhavn-Neighborhood-Copenhagen-6_RUiN2hX.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/recipes/Penne-Arrabbiata-4.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/recipes/Penne-Arrabbiata-4_6QI7Xd1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/recipes/Penne-Arrabbiata-4_t1yjnjE.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/recipes/Penne-Arrabbiata-4_vH6Ut3R.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/recipes/amalfi-coast.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/recipes/photo-6.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/recipes/premium_photo-1673967831980-1d377baaded2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/recipes/premium_photo-1673967831980-1d377baaded2_r7iPZ2w.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/recipes/unnamed.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/recipes/venice-1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/recipes/venice-1_3pISaal.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/recipes/venice-1_NIrJSn0.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/recipes/venice-1_O9WrAm2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/recipes/venice-1_XLzEzrL.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/recipes/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template.env" beforeDir="false" afterPath="$PROJECT_DIR$/template.env" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +269,8 @@
       <workItem from="1759675797214" duration="7793000" />
       <workItem from="1759743248436" duration="11803000" />
       <workItem from="1759831474311" duration="11243000" />
-      <workItem from="1759919656934" duration="8287000" />
+      <workItem from="1759919656934" duration="9137000" />
+      <workItem from="1760001743367" duration="3052000" />
     </task>
     <servers />
   </component>

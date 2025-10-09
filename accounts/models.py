@@ -1,3 +1,4 @@
+from cloudinary.models import CloudinaryField
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
 from django.db import models
@@ -25,7 +26,7 @@ class Profile(models.Model):
     first_name = models.CharField(max_length=100, blank=True, null=True)
     last_name = models.CharField(max_length=100, blank=True, null=True)
     bio_info = models.TextField(blank=True, null=True)
-    profile_picture = models.ImageField(blank=True, null=True)
+    profile_picture = CloudinaryField(resource_type='image', blank=True, null=True)
 
     @property
     def full_name(self):
