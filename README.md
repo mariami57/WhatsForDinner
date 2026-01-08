@@ -57,5 +57,22 @@ Browse, share, and discover delicious dishes — from quick weekday fixes to ind
   http://127.0.0.1:8000/
 </pre>
 
+## Deployment
+This app is deployed on Azure.
+Here’s an overview of the deployment setup:
 
+○ Database in Production:  PostgreSQL/MySQL
+
+○ Static & Media Files: Handled by [Cloudinary](https://cloudinary.com/)
+
+
+○ Environment Variables:
+<br>
+This project uses a .env file to manage secrets and environment configuration.
+A template.env file is included in the repository – you can copy it and rename it to .env before running the project
+
+
+## Live Demo
+Check out the live version here:
+[What`s for Dinner?](https://whats-for-dinner-eygba6hfb8b3bag4.italynorth-01.azurewebsites.net/)
 
