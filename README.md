@@ -65,14 +65,23 @@ Here’s an overview of the deployment setup:
 
 ○ Static & Media Files: Handled by [Cloudinary](https://cloudinary.com/)
 
-
 ○ Environment Variables:
 <br>
 This project uses a .env file to manage secrets and environment configuration.
 A template.env file is included in the repository – you can copy it and rename it to .env before running the project
 
 
+
 ## Live Demo
 Check out the live version here:
 [What`s for Dinner?](https://whats-for-dinner-eygba6hfb8b3bag4.italynorth-01.azurewebsites.net/)
+
+## Demo reset
+If the demo database gets corrupted or reset:
+
+<pre>
+ python manage.py migrate
+ python manage.py loaddata fixtures/demo_data.json
+</pre>
+
 

@@ -1,0 +1,69 @@
+[
+{
+  "model": "recipes.recipe",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "title": "Corn Ribs",
+    "image": "image/upload/v1767951457/gjnhq1oasfylkoqjxd1k.webp",
+    "instructions": "Cut corn – Using a sharp knife and a non-slip cutting board, cut off the base and the pointy end of the corn. Stand the corn upright then cut the corn into half then half again to make quarters. My way: Bang the knife with your hand to lock it into the top of the corn, then keep hitting the knife to move it down the corn. Halfway, you might be able to stop banging and just rock the knife down.\r\n    Easiest method – Cut half length ribs. Shorter ribs = easier to cut. See note 2.\r\n\r\nCooking:\r\n\r\n    BBQ (best!) or oven – Heat BBQ on high or oven 200°C/375°F (180°C fan).\r\n    Garlic butter – Melt the butter in a small saucepan over medium heat. Then add the garlic and cook for 20 seconds until it smells amazing! Remove from the stove and keep warm/liquid (I usually put it on the side of the BBQ).\r\n    Seasoning – mix in a small bowl.\r\n    Season corn – Place corn in a large bowl. Toss with olive oil.",
+    "ingredients": "4 whole corn cobs\r\n3 tbsp extra virgin olive oil\r\n2 tbsp parsley or coriander/cilantro , roughly chopped (optional garnish)\r\n1 1/2 tsp garlic powder\r\n2 1/2 tsp smoked paprika (or ordinary), plus more for garnish if desired\r\n2 tsp cooking/kosher salt\r\n2 tsp black pepper\r\n50g/ 3 tbsp unsalted butter\r\n1 garlic clove , finely minced",
+    "prep_time": 20,
+    "cook_time": 20,
+    "servings": 12,
+    "favourited_by": [
+      1
+    ]
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 2,
+  "fields": {
+    "user": 1,
+    "title": "Eclairs",
+    "image": "image/upload/v1767951645/ttgdfta7lofbg3klczsn.webp",
+    "instructions": "Preheat oven to 180°C/350°F (160°C fan). Position one shelf in the top third of the oven and another in the lower third. Lightly spray 3 trays with canola oil and line with baking/parchment paper.\r\nSimmer liquid – Melt butter in a medium saucepan over medium heat. When the butter is almost melted, add water.\r\nFlour – Once the liquid starts simmering, add flour and salt, and vigorously stir with a wooden spoon (while still on the stove). The mixture will turn pasty then in about 10 seconds it will transform into a sticky ball of dough that comes away from the walls of the saucepan. Once this happens, remove from the stove and leave to cool for 10 minutes (no longer).\r\nEggs – Add eggs one at a time, mixing vigorously with a wooden spoon after each addition, making sure each egg is incorporated before adding the next. At first, the mixture will look separated but when you keep stirring, it comes together.",
+    "ingredients": "100g / 7 tbsp unsalted butter , cut into 1 cm / 1/2\" cubes\r\n1 cup water\r\n1 cup plain/all-purpose flour\r\nPinch cooking/kosher salt\r\n4 large eggs (55-60g/2oz each) , at room temperature \r\n100g/ 3.5 oz 70% cocoa dark chocolate block , finely chopped\r\n2/3 cup thickened/heavy cream\r\n3 1/2 teaspoons corn syrup or liquid glucose \r\n3 cups thickened/heavy cream or whipping cream (min 35% fat)\r\n1 cup mascarpone (40%+ fat\r\n1 2/3 cups icing sugar/powdered sugar , sifted\r\n2 tsp vanilla bean paste or extract or, 2 vanilla pods",
+    "prep_time": 30,
+    "cook_time": 20,
+    "servings": 12,
+    "favourited_by": []
+  }
+},
+{
+  "model": "accounts.webuser",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$rNULyiuCr2TxZpQRFVhrqM$nx5w43+i/xXfc1/rJhWjaIqhs7bA5PgfpYCPcyawjLc=",
+    "last_login": "2026-01-09T09:35:28.888Z",
+    "is_superuser": false,
+    "username": "test",
+    "email": "test@test.com",
+    "is_active": true,
+    "is_staff": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "first_name": null,
+    "last_name": null,
+    "bio_info": null,
+    "profile_picture": null
+  }
+},
+{
+  "model": "subscriber.subscriber",
+  "pk": 1,
+  "fields": {
+    "name": "test",
+    "email": "test@test.com",
+    "date_subscribed": "2026-01-09T09:41:03.801Z"
+  }
+}
+]
