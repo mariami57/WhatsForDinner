@@ -4,33 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8b7d703-4829-4b30-a099-4fb827c3ed1c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatsForDinner/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsForDinner/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatsForDinner/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsForDinner/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/premium_photo-1673967831980-1d377baaded2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/premium_photo-1673967831980-1d377baaded2_3FCBWSJ.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/recipes/Nyhavn-Neighborhood-Copenhagen-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/recipes/Nyhavn-Neighborhood-Copenhagen-6_RUiN2hX.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/recipes/Penne-Arrabbiata-4.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/recipes/Penne-Arrabbiata-4_6QI7Xd1.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/recipes/Penne-Arrabbiata-4_t1yjnjE.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/recipes/Penne-Arrabbiata-4_vH6Ut3R.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/recipes/amalfi-coast.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/recipes/photo-6.avif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/recipes/premium_photo-1673967831980-1d377baaded2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/recipes/premium_photo-1673967831980-1d377baaded2_r7iPZ2w.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/recipes/unnamed.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/recipes/venice-1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/recipes/venice-1_3pISaal.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/recipes/venice-1_NIrJSn0.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/recipes/venice-1_O9WrAm2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/recipes/venice-1_XLzEzrL.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/recipes/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template.env" beforeDir="false" afterPath="$PROJECT_DIR$/template.env" afterDir="false" />
-    </list>
+    <list default="true" id="a8b7d703-4829-4b30-a099-4fb827c3ed1c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,36 +34,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django tests.Test: common.tests.test_api.SearchAPITests.test_global_search_by_ingredient.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: common.tests.test_api.SearchAPITests.test_global_search_by_title.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: recipes.tests.test_models.RecipeModelTests.test_string_representation_returns_true.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: recipes.tests.test_models.RecipeModelTests.test_total_time_field_returns_total_time.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: subscriber.tests.test_newsletter.NewsletterFromTests.test_newsletter_signup_view_renders_success.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: subscriber.tests.test_newsletter.NewsletterFromTests.test_submitting_valid_newsletter_form_creates_subscriber.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.customizations&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django tests.Test: common.tests.test_api.SearchAPITests.test_global_search_by_ingredient.executor": "Run",
+    "Django tests.Test: common.tests.test_api.SearchAPITests.test_global_search_by_title.executor": "Run",
+    "Django tests.Test: recipes.tests.test_models.RecipeModelTests.test_string_representation_returns_true.executor": "Run",
+    "Django tests.Test: recipes.tests.test_models.RecipeModelTests.test_total_time_field_returns_total_time.executor": "Run",
+    "Django tests.Test: subscriber.tests.test_newsletter.NewsletterFromTests.test_newsletter_signup_view_renders_success.executor": "Run",
+    "Django tests.Test: subscriber.tests.test_newsletter.NewsletterFromTests.test_submitting_valid_newsletter_form_creates_subscriber.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "ai.playground.ignore.import.keys.banner.in.settings": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/mmitova/WhatsForDinner",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.customizations",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\minni\Documents\GitHub\WhatsForDinner\mailjet_verification" />
@@ -114,6 +92,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
       <option name="TARGET" value="common.tests.test_api.SearchAPITests.test_global_search_by_ingredient" />
       <option name="SETTINGS_FILE" value="" />
       <option name="CUSTOM_SETTINGS" value="false" />
@@ -135,6 +114,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
       <option name="TARGET" value="recipes.tests.test_models.RecipeModelTests.test_string_representation_returns_true" />
       <option name="SETTINGS_FILE" value="" />
       <option name="CUSTOM_SETTINGS" value="false" />
@@ -156,6 +136,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
       <option name="TARGET" value="recipes.tests.test_models.RecipeModelTests.test_total_time_field_returns_total_time" />
       <option name="SETTINGS_FILE" value="" />
       <option name="CUSTOM_SETTINGS" value="false" />
@@ -177,6 +158,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
       <option name="TARGET" value="subscriber.tests.test_newsletter.NewsletterFromTests.test_newsletter_signup_view_renders_success" />
       <option name="SETTINGS_FILE" value="" />
       <option name="CUSTOM_SETTINGS" value="false" />
@@ -198,6 +180,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
       <option name="TARGET" value="subscriber.tests.test_newsletter.NewsletterFromTests.test_submitting_valid_newsletter_form_creates_subscriber" />
       <option name="SETTINGS_FILE" value="" />
       <option name="CUSTOM_SETTINGS" value="false" />
@@ -218,6 +201,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="RUN_TOOL" value="" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8000" />
       <option name="host" value="" />
@@ -242,8 +226,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-PY-251.25410.159" />
-        <option value="bundled-python-sdk-e0ed3721d81e-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.159" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PY-253.29346.142" />
+        <option value="bundled-python-sdk-f2b7a9f6281b-6e1f45a539f7-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.29346.142" />
       </set>
     </attachedChunks>
   </component>
@@ -271,6 +255,7 @@
       <workItem from="1759831474311" duration="11243000" />
       <workItem from="1759919656934" duration="9137000" />
       <workItem from="1760001743367" duration="3052000" />
+      <workItem from="1767949457285" duration="3198000" />
     </task>
     <servers />
   </component>

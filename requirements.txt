@@ -58,3 +58,4 @@ urllib3==2.5.0
 virtualenv==20.35.4
 whitenoise==6.11.0
 zstandard==0.23.0
+dj-database-url
