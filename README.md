@@ -19,7 +19,7 @@ Browse, share, and discover delicious dishes — from quick weekday fixes to ind
 ## Tech Stack
 - Backend: Django (Python)
 - Frontend: HTML, CSS, JavaScript (vanilla, fetch API for AJAX)
-- Database: PostgreSQL
+- Database: PostgreSQL on Azure
 - Authentication: Django built-in auth system
 - Email/Contact: [Formspree](https://formspree.io/), [MailJet](https://www.mailjet.com/)
 - Static Files: [Cloudinary](https://cloudinary.com/)
@@ -43,9 +43,29 @@ Browse, share, and discover delicious dishes — from quick weekday fixes to ind
 </pre>
 
 ### 4. Run migrations:
-<pre>
-  python manage.py migrate
-</pre>
+This app uses PostgreSQL. Depending on where you are running the app, the steps differ slightly:
+
+- Running the app locally (development):
+
+    For local development, it’s recommended to use a local PostgreSQL database rather than the production database.
+    
+    Example .env or local DATABASE_URL:
+    
+    <pre>
+    DATABASE_URL=postgresql://local_user:local_password@localhost:5432/tododb
+    </pre>
+    
+    Apply migrations to your local database:
+    
+    <pre>
+    python manage.py migrate
+    </pre>
+
+    This ensures you can test your app without affecting production data.
+
+- Notes
+
+    Ensure psycopg2-binary is installed both locally and in production. If you want to test connecting from your local machine to the Azure PostgreSQL, you must allow your local IP in the Azure firewall. Always restart the app after changing DATABASE_URL or other environment variables.
 
 ### 5. Run the development server:
 <pre>
@@ -61,9 +81,37 @@ Browse, share, and discover delicious dishes — from quick weekday fixes to ind
 This app is deployed on Azure.
 Here’s an overview of the deployment setup:
 
-○ Database in Production:  PostgreSQL/MySQL
+The database in production is PostgreSQL on Azure.
+Here’s an overview of the deployment setup:
 
-○ Static & Media Files: Handled by [Cloudinary](https://cloudinary.com/)
+A) Connection is configured via the environment variable DATABASE_URL:
+   <pre>
+    postgresql://<DB_USER>:<PASSWORD>@<SERVER_NAME>.postgres.database.azure.com:5432/<DB_NAME>?sslmode=require
+   </pre>
+  - Notes:
+     
+    ○ All special characters in the password must be URL-encoded.
+
+    ○ sslmode=require is mandatory for Azure.
+
+    ○ Ensure the Azure PostgreSQL server allows access from your App Service (enable "Allow Azure services and resources to access this server") or add firewall rules for your SSH/client IP.
+    
+B) Dependencies
+   - Required packages for PostgreSQL support (Installed via requirements.txt):
+     
+     psycopg2-binary
+     
+     dj-database-url
+   
+     
+C) Running Migrations
+   Run Django migrations via SSH after verifying database connectivity:
+   <pre>
+      python manage.py migrate
+   </pre>
+   Ensure migrations complete before starting the app to avoid startup timeouts.
+
+D) Static & Media Files: Handled by [Cloudinary](https://cloudinary.com/)
 
 ○ Environment Variables:
 <br>
@@ -75,13 +123,3 @@ A template.env file is included in the repository – you can copy it and rename
 ## Live Demo
 Check out the live version here:
 [What`s for Dinner?](https://whats-for-dinner-eygba6hfb8b3bag4.italynorth-01.azurewebsites.net/)
-
-## Demo reset
-If the demo database gets corrupted or reset:
-
-<pre>
- python manage.py migrate
- python manage.py loaddata fixtures/demo_data.json
-</pre>
-
-
