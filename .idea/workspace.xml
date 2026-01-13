@@ -52,7 +52,7 @@
     "ai.playground.ignore.import.keys.banner.in.settings": "true",
     "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/mmitova/WhatsForDinner",
+    "last_opened_file_path": "/home/mmitova/Website",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -256,6 +256,7 @@
       <workItem from="1759919656934" duration="9137000" />
       <workItem from="1760001743367" duration="3052000" />
       <workItem from="1767949457285" duration="3198000" />
+      <workItem from="1768124374461" duration="961000" />
     </task>
     <servers />
   </component>
