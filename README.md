@@ -100,15 +100,18 @@ B) Dependencies
      dj-database-url
      
 C) Running Migrations
+
    Run Django migrations via SSH after verifying database connectivity:
    <pre>
       python manage.py migrate
    </pre>
    Ensure migrations complete before starting the app to avoid startup timeouts.
 
-D) Static & Media Files: Handled by [Cloudinary](https://cloudinary.com/)
+D) Static & Media Files
 
-○ Environment Variables:
+Handled by [Cloudinary](https://cloudinary.com/)
+
+E) Environment Variables
 <br>
 This project uses a .env file to manage secrets and environment configuration.
 A template.env file is included in the repository – you can copy it and rename it to .env before running the project
