@@ -42,7 +42,7 @@ Browse, share, and discover delicious dishes — from quick weekday fixes to ind
   pip install -r requirements.txt
 </pre>
 
-### 4. Run migrations:
+### 4. Apply migrations:
 This app uses PostgreSQL. Depending on where you are running the app, the steps differ slightly:
 
 - Running the app locally (development):
@@ -63,10 +63,8 @@ This app uses PostgreSQL. Depending on where you are running the app, the steps 
 
     This ensures you can test your app without affecting production data.
 
-- Notes
-
-    Ensure psycopg2-binary is installed both locally and in production. If you want to test connecting from your local machine to the Azure PostgreSQL, you must allow your local IP in the Azure firewall. Always restart the app after changing DATABASE_URL or other environment variables.
-
+- Running the app in production: see the [Deployment](#deployment) section for setup and migration instructions.
+  
 ### 5. Run the development server:
 <pre>
   python manage.py runserver
@@ -86,15 +84,13 @@ Here’s an overview of the deployment setup:
 
 A) Connection is configured via the environment variable DATABASE_URL:
    <pre>
-    postgresql://<DB_USER>:<PASSWORD>@<SERVER_NAME>.postgres.database.azure.com:5432/<DB_NAME>?sslmode=require
+    DATABASE_URL=postgresql://local_user:local_password@localhost:5432/tododb
    </pre>
   - Notes:
      
     ○ All special characters in the password must be URL-encoded.
 
-    ○ sslmode=require is mandatory for Azure.
-
-    ○ Ensure the Azure PostgreSQL server allows access from your App Service (enable "Allow Azure services and resources to access this server") or add firewall rules for your SSH/client IP.
+    ○ Ensure your app can access the Neon database (Neon provides connection details and authentication).
     
 B) Dependencies
    - Required packages for PostgreSQL support (Installed via requirements.txt):
