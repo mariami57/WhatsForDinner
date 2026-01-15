@@ -84,7 +84,7 @@ Here’s an overview of the deployment setup:
 
 A) Connection is configured via the environment variable DATABASE_URL:
    <pre>
-    DATABASE_URL=postgresql://local_user:local_password@localhost:5432/tododb
+    DATABASE_URL=postgresql://NEON_USER:NEON_PASSWORD@NEON_HOST:NEON_PORT/NEON_DB
    </pre>
   - Notes:
      
@@ -98,7 +98,6 @@ B) Dependencies
      psycopg2-binary
      
      dj-database-url
-   
      
 C) Running Migrations
    Run Django migrations via SSH after verifying database connectivity:
